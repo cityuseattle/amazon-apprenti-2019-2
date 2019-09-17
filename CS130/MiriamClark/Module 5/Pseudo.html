@@ -16,6 +16,15 @@
    input:checked{
        visibility: hidden;
    }
+   li:last-child::before {
+       content: 'The option - ';
+       background-color: yellow;
+   }
+   li:last-child::after {
+       content: ' is special.';
+       font-weight: bold;
+   }
+
    </style>
    }
 </head>
