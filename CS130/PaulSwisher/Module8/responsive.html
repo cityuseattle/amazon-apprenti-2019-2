@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: start;
+      font-size: 5vw;
+    }
+    nav {
+      width: 100%;
+      height: 40px;
+      background-color: #163049;
+      display: flex;
+      justify-content: space-between;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      height: 100%;
+      margin: 0;
+    }
+    nav ul li {
+      /* float: left; */
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+    li a {
+      padding: 0 6px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+    li a:hover {
+      cursor: pointer;
+      color: lightslategrey;
+    }
+    main {
+      width: 90%;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .biologyDiv {
+      display: flex;
+      margin: 20px;
+    }
+    .biologyDiv img {
+      width: 100px;
+      margin-right: 20px;
+    }
+    .biologyDiv p {
+      margin: 0;
+      text-align: start;
+      font-size: 14px;
+    }
+    .hidden {
+      display: inherit;
+    }
+    @media only screen and (max-width: 557px) {
+        .hidden {
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 665px) {
+    .biologyDiv {
+        display: inherit;
+    } 
+    .biologyDiv img {
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+        
+    }}
+  </style>
+  <title>Axe Capital</title>
+</head>
+<body>
+  <nav>
+    <img src="https://res.cloudinary.com/orderstaker/image/upload/v1566927840/others/axe1.jpg" alt="Axe icon"/>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Report</a></li>
+      <li><a href="#">Strategy</a></li>
+      <li class="hidden"><a href="#">About</a></li>
+      <li class="hidden"><a href="#">Relation Ship</a></li>
+      <li class="hidden"><a href="#">Help</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Axe Capital Hedge Fund</h1>
+    <img class="bannerImg" src="https://res.cloudinary.com/orderstaker/image/upload/v1566932660/others/AxeCapital1.jpg" alt="Axe Office" />
+    <section>
+      <div class="biologyDiv">
+        <img src="https://res.cloudinary.com/orderstaker/image/upload/v1566933343/others/avator1.jpg" alt="CEO Bobby Axelrod"/>
+        <p>
+          <strong>CEO Bobby Axelrod</strong> is an ambitious billionaire manager of a hedge fund called 
+          Axe Capital and a Hofstra University graduate who came from humble beginnings. He was one 
+          of the survivors of the September 11 attacks and pays the college tuition of the children 
+          of his colleagues who died in the World Trade Center. He is extremely charitable and 
+          generous in public, but uses insider trading and bribery to grow his firm's enormous wealth.
+        </p>
+      </div>
+      <div class="biologyDiv">
+        <img src="https://res.cloudinary.com/orderstaker/image/upload/v1566933343/others/avator2.jpg" alt="Psychiatrist Wendy Rhoades"/>
+        <p>
+          <strong>Wendy Rhoades</strong> is a psychiatrist, in-house performance coach at Axe 
+          Capital and wife of Chuck Rhoades, Jr. She is self-possessed, motivated, and extremely 
+          successful. She has a strong relationship with Axelrod, her boss, with whom she has been 
+          working for more than 15 years.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
