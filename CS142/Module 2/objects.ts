@@ -5,7 +5,6 @@ let employee: {readonly id: number, name: string} = {
 
 console.log(employee.id);
 console.log(employee.name);
-
 employee.id = 25;
 employee.name = 'David';
 
