@@ -19,5 +19,5 @@ var quickSort = function (input) {
     });
     return __spreadArrays(quickSort(left), [input[povitIndex]], quickSort(right));
 };
-console.log(quickSort([2, 3, 4, 2, 3, 4, 7, 8, 6, 5, 4, 3, 5, 2, -1]));
+// console.log(quickSort([2,3,4,2,3,4,7,8,6,5,4,3,5,2,-1]));
 exports["default"] = quickSort;

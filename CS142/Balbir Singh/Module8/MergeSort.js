@@ -21,5 +21,5 @@ var mergeSort = function (input) {
     var right = input.slice(middleIndex);
     return sort(mergeSort(left), mergeSort(right));
 };
-console.log(mergeSort([2, 3, 4, 5, 6, 7, 8, 6, 5, 4, 3, 5, 2, -1]));
+//console.log(mergeSort([2,3,4,5,6,7,8,6,5,4,3,5,2,-1]));
 exports["default"] = mergeSort;

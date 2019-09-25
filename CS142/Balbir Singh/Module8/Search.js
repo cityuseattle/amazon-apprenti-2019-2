@@ -23,6 +23,6 @@ function binarySearch(arr, target) {
 // Given an array input and a target number,
 // search for the number index in the array
 // console.log(linearSearch(input, 9));
-for (var i = 1; i <= 10; i++)
-    console.log(binarySearch(input, i * 3));
+//for(let i = 1; i <= 10; i++)
+//   console.log(binarySearch(input, i * 3));
 exports["default"] = binarySearch;
