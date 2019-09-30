@@ -1,0 +1,13 @@
+{
+    "name": "Module1Lab",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Sabuna",
+    "license": "ISC"
+  }
+  
