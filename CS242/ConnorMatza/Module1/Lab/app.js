@@ -1,23 +1,21 @@
-const express = require('express');
-const timestamp = require('./timestamp');
-const routes = require('./routes')
-const app = express();
+const http = require('http');
 const port = 4000;
-const logger = (req, res, next) => {
-    console.log(req.params);
-    next();
-}
+const server = http.createServer((req, res) => {
+    let content;
+    if(req.url == '/') {
+        content = "This is my home page"
+    }
+    else if (req.url == '/address') {
+        content = '<h2>This is my address page</h2>'
+    }
+    else {
+        content = "You entered an invalid page, please try again"
+    }
+    console.log(req.connection.remoteAddress + " this is the request ip");
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html; charset=utf-8')
+    res.end(content);
 
-app.set('view engine', 'ejs');
-app.use(logger);
-app.use(timestamp.timestamp);
-app.use('/routes',  routes);
-app.get('/test', (req, res) => {
-    res.send("PONG");
 })
 
-app.listen(port)
-console.log(`Server listening on ${port}`);
-
-
-
+server.listen(port, () => console.log(`Server listening on ${port}`))
