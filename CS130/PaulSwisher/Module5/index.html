@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Document</title>
+</head>
+<body>
+  <div>1</div>
+  <div id="box1">2</div>
+  <div class="redBox">3</div>
+  <div><span>5</span></div>
+  <div class="redBox">6</div>
+  <nav>
+    <ul>
+      <li>A</li>
+      <li data-test="testB">B</li>
+      <li data-test="testC">C</li>
+    </ul>
+  </nav>
+  <h3>Header 3</h3>
+  <h4>Header 4</h4>
+</body>
+</html>
+<style>
+    div {
+        display: inline-block;
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        text-align: center;
+    }
+    #box1 {
+  background-color: orange;
+  color: white;
+}
+.redBox {
+    border: 1px dashed red;
+}
+div span {
+    background-color: aquamarine;
+}
+h3, h4 {
+    color:crimson;
+    font-weight: 800;
+    text-decoration: underline;
+}
+[data-test] {
+    font-size: 1.5rem;
+}
+[data-test=testB] {
+    color:brown;
+}
+</style>

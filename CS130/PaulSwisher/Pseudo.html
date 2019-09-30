@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+h2:hover {
+  color: red;
+  cursor: pointer;
+}
+li:nth-child(2) {
+  font-size: 1.4rem;
+}
+input:checked{
+  visibility: hidden;
+}
+li:last-child::before {
+  content: 'The option - ';
+  background-color: yellow;
+}
+li:last-child::after {
+  content: ' is special. ';
+  font-weight: bold;
+}
+  </style>
+<body>
+  <h2>HeaderA</h2>
+  <ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+  </ul>
+  <input type="checkbox">OptionA</input>
+  <input type="checkbox">OptionB</input>
+</body>
+</html>
