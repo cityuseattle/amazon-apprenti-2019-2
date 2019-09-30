@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+    input:invalid {
+        border: 2px solid red;
+    }
+     input:valid {
+        border: 2px solid black; 
+     }   
+        </style>
+    <title>FormMod4</title>
+</head>
+<body>
+    <form >
+        <div>
+            <label for="inpEmail">Email</label>
+            <input type="email" name="inpEmail" required/>   
+        </div>
+        <div>
+            <label for="inpName">Name</label>
+            <input type="text" name="inpName" maxlength="6" required/>   
+        </div> 
+
+        <div>
+            <label for="inpTel">Phone Number</label>
+            <input type="tel" name="inpTel" required/>   
+        </div>
+        <div>
+            <label for="inpOrder">Order Number (Format: 000-123-4567)</label>
+            <input type="text" name="inpOrder" pattern="^\d{3}-\d{3}-\d{4}$" required/>   
+        </div>    
+    </form>
+</body>
+</html>
