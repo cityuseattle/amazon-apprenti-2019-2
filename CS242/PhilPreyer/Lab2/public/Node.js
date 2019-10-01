@@ -11,10 +11,6 @@ app.use(timestamp_1.default);
 app.use(express_1.default.static('../public'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
-app.get('/', function (req, res) { return res.render('address', {
-    name: 'Phillip Preyer',
-    phoneNumber: '253-678-7738',
-    address: '2217 3rd Ave #703, Seattle Wa 98121'
-}); });
+app.get('/', function (req, res) { return res.end('This is your Express server.'); });
 app.get('/address', address_controller_1.default);
 app.listen(4000, function () { return console.log('The server is running on http://localhost:4000'); });
