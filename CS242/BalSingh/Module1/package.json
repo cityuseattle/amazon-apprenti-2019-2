@@ -1,8 +1,8 @@
 {
-  "name": "bal-module1",
+  "name": "bal-module2",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "lab.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
