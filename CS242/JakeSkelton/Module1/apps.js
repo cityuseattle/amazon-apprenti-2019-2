@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
     let content;
     if (req.url === '/about') content = '<h3>This is the ABOUT page.</h3>';
     else if (req.url === '/') content = '<h1>This is the HOME page.</h1>'
-    else content = '<h2>404 PAge not found.</h2>'
+    else content = '<h2>404 Page not found.</h2>'
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end(content)
