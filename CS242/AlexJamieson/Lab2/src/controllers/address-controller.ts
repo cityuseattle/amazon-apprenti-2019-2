@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 
-const addressController = (req: Request, res: Response) => {
-    console.log('The address controller is called');
-    res.end('This is the address page');
-    console.log('The address controller is finished');
-};
+const addressController = (req: Request, res: Response) => res.render('address', {
+    name: 'Alex',
+    phoneNumber: '1-800-888-USPS',
+    address: '642 12th Ave Kirkland, WA 98033'
+});
 
 export default addressController;

@@ -10,11 +10,7 @@ app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 
 //The Router
-app.get('/', (req, res) => res.render('address', {
-    name: 'Alex',
-    phoneNumber: '1-800-888-USPS',
-    address: '642 12th Ave Kirkland, WA 98033'
-}));
+app.get('/', (req, res) => res.end('This is my lab 2 express server'));
 app.get('/address', addressController);
 
 app.listen(4000, () => console.log('The server is running at http://localhost:4000'));
