@@ -6,7 +6,7 @@ const hostname = 'localhost';
 
 const server = http.createServer((req, res) => {
     let content;
-    if (req.url === '/about') content = '<h3>This is the ABOUT page.</h3>';
+    if (req.url === '/address') content = '<h3>This is the Address page.</h3>';
     else if (req.url === '/') content = '<h1>This is the Home page.</h1>';
     else content = '<h2>404 Page is not found.</h2>';
     res.statusCode = 200; 
