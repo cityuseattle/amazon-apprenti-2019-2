@@ -22,7 +22,7 @@ app.get('/', (req, res)=> res.render('index', {
 
 app.get('/address', (req, res)=> res.render('address', {
     name: 'Christian',
-    phoneNumber: '555555555',
+    phoneNumber: '555-555-555',
     address: 'Seattle' 
 }));
 app.get('/order', orderController);
