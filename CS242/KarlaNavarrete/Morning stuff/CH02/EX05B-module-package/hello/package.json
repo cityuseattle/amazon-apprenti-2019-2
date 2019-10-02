@@ -1,12 +1,11 @@
 {
-  "name": "Karla-Module1",
+  "name": "please-work",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "hello-module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Karla N",
+  "author": "",
   "license": "ISC"
 }
