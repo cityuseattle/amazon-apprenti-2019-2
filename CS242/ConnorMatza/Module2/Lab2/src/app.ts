@@ -13,6 +13,6 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/address', addressController);
-app.listen(port, "localhost", () => {
+app.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`)
 });

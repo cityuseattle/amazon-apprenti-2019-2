@@ -16,6 +16,6 @@ app.use(express_1.default.static('../public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.get('/address', addressController_1.default);
-app.listen(port, "localhost", function () {
+app.listen(port, function () {
     console.log("Server listening on http://localhost:" + port);
 });
