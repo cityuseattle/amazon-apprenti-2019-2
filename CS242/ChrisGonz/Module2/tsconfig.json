@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",          
+    "module": "commonjs",     
+    "outDir": "./public",
+    "strict": true,           
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"]       
+  }
+}
