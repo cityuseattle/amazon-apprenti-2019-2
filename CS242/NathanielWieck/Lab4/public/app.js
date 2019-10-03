@@ -25,4 +25,4 @@ app.get('/', function (req, res) { return res.render('index', {
 app.get('/productForm', function (req, res) { return res.render('product-form'); });
 app.post('/product', new_product_controller_1.default);
 app.get('/product', find_product_controller_1.default);
-app.listen(3000, function () { return console.log('The server is running on http://localhost:3000'); });
+app.listen(4000, function () { return console.log('The server is running on http://localhost:4000'); });

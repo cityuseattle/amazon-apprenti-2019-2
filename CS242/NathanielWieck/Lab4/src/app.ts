@@ -30,4 +30,4 @@ app.get('/productForm', (req, res) => res.render('product-form'));
 app.post('/product', newProductController)
 app.get('/product', findProductController)
 
-app.listen(3000, () => console.log('The server is running on http://localhost:3000'));
+app.listen(4000, () => console.log('The server is running on http://localhost:4000'));
