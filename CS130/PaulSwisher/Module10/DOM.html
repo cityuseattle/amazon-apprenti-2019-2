@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 40% 1fr;
+      grid-column-gap: 15px;
+    }
+    .container > img {
+      width: 100%;
+      height: auto;
+      align-self: center;
+    }
+    .innerContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      align-items: center;
+    }
+    .innerContainer > img {
+      width: 100%;
+    }
+    .innerContainer > article > table {
+      width: 100%;
+      text-align: left;
+    }
+    .formDiv {
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: 200px 200px 200px 50px;
+      grid-gap: 15px 10px;
+      justify-items: center;
+    }
+    
+    @media only screen and (max-width:1300px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 6vw;
+      }
+    }
+    @media only screen and (max-width:700px) {
+      .innerContainer {
+        grid-template-columns: 1fr;
+      }
+      .formDiv {
+        grid-template-columns: 1fr;
+        justify-items: end;
+        margin-right: 30px;
+      }
+      .formDiv button {
+        justify-self: self-end;
+      }
+    }
+  </style>
+  <title>Axe Capital</title>
+</head>
+<body>
+  <div class="container">
+    <img alt="Axe Capital Office" src="https://res.cloudinary.com/orderstaker/image/upload/v1566932660/others/AxeCapital1.jpg" />
+    <div>
+      <h1>This is an important report</h1>
+      <div class="innerContainer">
+        <img alt="Financial Chart" src="https://res.cloudinary.com/orderstaker/image/upload/v1567012029/others/FinancialChart.png" />
+        <article>
+          <p>
+            There are four types of financial statements. The first one is the balances sheet that 
+            equates assets and liabilities. The second one is the income statement that takes into 
+            account the revenue and the expenses and matches them. The third one is the cash flow 
+            statement that looks at the cash transactions and non-cash transactions and finds out 
+            about the cash inflow and cash outflow. 
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Value</th>
+                <th scope="col">Change</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Item1</td>
+                <td>$1,000,000</td>
+                <td>+50%</td>
+                <td><button>Remove</button></td>
+              </tr>
+              <tr>
+                <td>Item2</td>
+                <td>$5,000</td>
+                <td>+10%</td>
+                <td><button>Remove</button></td>
+              </tr>
+              <tr>
+                <td>Item3</td>
+                <td>$10,000</td>
+                <td>-10%</td>
+                <td><button>Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="formDiv">
+    <div>
+      <label for="category">Categroy</label>
+      <input type="text" id="category" />
+    </div>
+    <div>
+      <label for="value">Value</label>
+      <input type="text" id="value" />
+    </div>
+    <div>
+      <label for="change">Change</label>
+      <input type="text" id="change" />
+    </div>
+    <div>
+      <button id="addBtn">Add</button>
+    </div>
+  </div>
+  <!-- JavaScript Start Here -->
+  <script>
+      let table;
+      let categoryInput;
+      let valueInput;
+      let changeInput;
+      
+      const handleAdd = () => {
+          if (categoryInput.value === '' || valueInput.value === '' || changeInput.value === '' )
+          return;
+        
+        const trNode = document.createElement('tr');
+        const categoryNode = document.createElement('td'); 
+        const valueNode = document.createElement('td'); 
+        const changeNode= document.createElement('td'); 
+        const buttonNode = document.createElement('td'); 
+        categoryNode.innerText = categoryInput.value;
+        valueNode.innerText = valueInput.value;
+        changeNode.innerText = changeInput.value;
+        buttonNode.innerHTML = '<button>Remove</button>';
+        trNode.appendChild(categoryNode);
+        trNode.appendChild(valueNode);
+        trNode.appendChild(changeNode);
+        trNode.appendChild(buttonNode);
+        table.children[1].appendChild(trNode);
+        categoryInput.value = '';
+        valueInput.value = '';
+        changeInput.value = '';
+      };
+        document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.container').children[0].src = 'https://bit.ly/axeOffice';
+        const h1Element = document.querySelector('h1');
+        h1Element.innerText = ' A new report title';
+        h1Element.style.color = '#731d00';
+        categoryInput = document.getElementById('category');
+        valueInput = document.getElementById('value');
+        changeInput = document.getElementById('change');
+        table = document.querySelector('table');
+        document.getElementById('addBtn').addEventListener('click', handleAdd);
+    });
+  </script>
+  <!-- JavaScript End Here -->
+</body>
+</html>

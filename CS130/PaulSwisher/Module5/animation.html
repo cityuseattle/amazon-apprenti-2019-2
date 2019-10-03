@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      margin-top: 30px;
+      width: 70px;
+      height: 70px;
+      border: 1px solid black;
+      background-color: cadetblue;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+    #box1:hover {
+      background-color: gold;
+      -ms-transform: rotate(360deg); /* IE 9 */
+      -webkit-transform: rotate(360deg); /* Safari 3-8 */
+      transform: rotate(360deg);
+    }
+    @keyframes boxAnimation {
+      0% {background-color: blueviolet}
+      25% {background-color: darkorange}
+      50% {background-color: deepskyblue}
+      100% {background-color: firebrick}
+    }
+    #box2:hover {
+      animation-name: boxAnimation;
+      animation-duration: 3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="box1"></div>
+  <div class="box" id="box2"></div>
+</body>
+</html>
