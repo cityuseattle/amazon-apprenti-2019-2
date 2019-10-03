@@ -1,9 +1,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
+import aws from 'aws-sdk';
+import db from './dynamo';
 
 import orderController from './controllers/order-controller';
-
 dotenv.config();
 const app = express();
 
