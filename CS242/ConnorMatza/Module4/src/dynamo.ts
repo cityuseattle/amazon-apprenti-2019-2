@@ -8,4 +8,3 @@ const db = new aws.DynamoDB();
 
 
 export default db;
-
