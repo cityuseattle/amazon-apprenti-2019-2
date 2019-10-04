@@ -2,10 +2,10 @@ import bcrypt from 'bcryptjs';
 import { stringify } from 'querystring';
 
 
-async function hashPass(plaintext: string) {
+function hashPass(plaintext: string) {
     let saltRounds = 10;
 
-    let hashedPass = await bcrypt.hash(plaintext, saltRounds, function(err, hash) {
+    let hashedPass = bcrypt.hash(plaintext, saltRounds, function(err, hash) {
         if(err) {
             return err;
         }
@@ -15,3 +15,4 @@ async function hashPass(plaintext: string) {
     });
     return hashedPass;
 }
+export default hashPass;

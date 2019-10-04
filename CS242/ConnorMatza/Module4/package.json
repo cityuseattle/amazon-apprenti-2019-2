@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc && cpx ./src/.env ./public && cpx ./src/views/**/* public/views"
+    "tsc": "tsc",
+    "copyViews": "cp -R ./src/views ./public",
+    "copyEnv": "cp ./src/.env ./public/.env"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "dependencies": {
     "@aws/dynamodb-data-mapper": "^0.7.3",
     "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
+    "@aws/dynamodb-expressions": "^0.7.3",
     "@types/bcrypt": "^3.0.0",
     "@types/bcryptjs": "^2.4.2",
     "@types/node": "^12.7.11",
@@ -20,7 +23,9 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
     "ejs": "^2.6.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
+    "slash": "^3.0.0"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",

@@ -2,9 +2,20 @@ import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import aws from 'aws-sdk';
+import mapper from './mapper';
+import slash from 'slash';
 import db from './dynamo';
-
 import orderController from './controllers/order-controller';
+import logger from './middlewares/logging';
+import newUserController from './controllers/new-user-controller';
+import findUserController from './controllers/find-user-controller';
+import { initTables } from './mapper';
+import { User } from './models/user';
+
+
+console.log(typeof(User));
+
+initTables();
 dotenv.config();
 const app = express();
 
@@ -14,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('../public'));
-app.set('views', './views');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 // The router
 app.get('/', (req, res) => res.render('index', {
@@ -22,5 +33,9 @@ app.get('/', (req, res) => res.render('index', {
   content: 'This is the content for the index page.'
 }));
 app.get('/order', orderController);
-
+app.get('/userForm', (req, res) => {
+  res.render('user-form');
+})
+app.post('/user', newUserController);
+app.get('/user', findUserController);
 app.listen(3000, () => console.log('The server is running on http://localhost:3000'));
