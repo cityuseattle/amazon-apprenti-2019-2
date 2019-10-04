@@ -1,0 +1,15 @@
+{
+  "name": "ch02-ex07",
+  "version": "1.0.0",
+  "description": "Server-Side Web Application\r     Node.js third-party module - 'connect'",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sam Chung",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.7.0"
+  }
+}
