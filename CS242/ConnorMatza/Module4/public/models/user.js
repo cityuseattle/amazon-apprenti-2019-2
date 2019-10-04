@@ -94,8 +94,12 @@ function findUser(username) {
     return __awaiter(this, void 0, void 0, function () {
         var user;
         return __generator(this, function (_a) {
-            user = mapper_1.default.get(Object.assign(new User, { userName: username }));
-            return [2 /*return*/, user];
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, mapper_1.default.get(Object.assign(new User, { userName: username }))];
+                case 1:
+                    user = _a.sent();
+                    return [2 /*return*/, user];
+            }
         });
     });
 }

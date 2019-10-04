@@ -11,12 +11,13 @@ import newUserController from './controllers/new-user-controller';
 import findUserController from './controllers/find-user-controller';
 import { initTables } from './mapper';
 import { User } from './models/user';
+import path from 'path';
 
 
-console.log(typeof(User));
+const dotenvdir = path.resolve(__dirname, ".env")
 
+dotenv.config({path: dotenvdir});
 initTables();
-dotenv.config();
 const app = express();
 
 // support parsing of application/json type post data

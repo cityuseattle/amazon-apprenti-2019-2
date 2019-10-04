@@ -10,10 +10,10 @@ var order_controller_1 = __importDefault(require("./controllers/order-controller
 var new_user_controller_1 = __importDefault(require("./controllers/new-user-controller"));
 var find_user_controller_1 = __importDefault(require("./controllers/find-user-controller"));
 var mapper_1 = require("./mapper");
-var user_1 = require("./models/user");
-console.log(typeof (user_1.User));
+var path_1 = __importDefault(require("path"));
+var dotenvdir = path_1.default.resolve(__dirname, ".env");
+dotenv_1.default.config({ path: dotenvdir });
 mapper_1.initTables();
-dotenv_1.default.config();
 var app = express_1.default();
 // support parsing of application/json type post data
 app.use(body_parser_1.default.json());
