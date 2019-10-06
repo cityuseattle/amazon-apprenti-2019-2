@@ -12,6 +12,7 @@ var find_user_controller_1 = __importDefault(require("./controllers/find-user-co
 var mapper_1 = require("./mapper");
 var path_1 = __importDefault(require("path"));
 var new_product_controller_1 = __importDefault(require("./controllers/new-product-controller"));
+var find_product_controller_1 = __importDefault(require("./controllers/find-product-controller"));
 var dotenvdir = path_1.default.resolve(__dirname, ".env");
 dotenv_1.default.config({ path: dotenvdir });
 mapper_1.initTables();
@@ -38,4 +39,5 @@ app.get('/productForm', function (req, res) {
 app.post('/product', new_product_controller_1.default);
 app.post('/user', new_user_controller_1.default);
 app.get('/user', find_user_controller_1.default);
+app.get('/product', find_product_controller_1.default);
 app.listen(3000, function () { return console.log('The server is running on http://localhost:3000'); });
