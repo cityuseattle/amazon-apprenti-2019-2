@@ -14,6 +14,7 @@ import { User } from './models/user';
 import path from 'path';
 import { Product } from './models/product';
 import newProductController from './controllers/new-product-controller';
+import findProductController from './controllers/find-product-controller';
 
 
 const dotenvdir = path.resolve(__dirname, ".env")
@@ -46,4 +47,5 @@ app.get('/productForm' , (req, res) => {
 app.post('/product', newProductController);
 app.post('/user', newUserController);
 app.get('/user', findUserController);
+app.get('/product', findProductController);
 app.listen(3000, () => console.log('The server is running on http://localhost:3000'));
