@@ -7,7 +7,7 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <img
-          src="http://bit/ly/cs242Framework"
+          src="http://bit.ly/cs242Framework"
           className="App-logo"
           alt="framework"
         />
