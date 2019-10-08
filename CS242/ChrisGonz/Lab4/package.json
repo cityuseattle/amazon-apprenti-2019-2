@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc && copy .\\src\\.env .\\public && copy .\\src\\views\\* .\\public\\views",
-    "tscbash": "tsc & cp /src/.env ./public && copy ./src/views/* ./public/views"
+    "tscbash": "tsc & cp /src/.env ./public && cp ./src/views/* ./public/views"
   },
   "keywords": [],
   "author": "",
