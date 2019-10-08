@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import { addBook } from '../models/book';
 
-const handler = (req: Request, res: Response) => {
+const bookHandler = (req: Request, res: Response) => {
     const { title, isbn, author, picture, price } = req.body;
     try {
         addBook(title, isbn, author, picture, price);
@@ -13,4 +13,4 @@ const handler = (req: Request, res: Response) => {
     res.status(200).end();
 }
 
-export default handler;
+export default bookHandler;

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { BookFormComponent } from './book-form/book-form.component';
+import { BirthdayCardFormComponent } from './birthdaycard-form/birthdaycard-form.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,14 @@ const routes: Routes = [
   {
     path: 'admin/bookform/:id',
     component: BookFormComponent
+  },
+  {
+    path: 'admin/cardform',
+    component: BirthdayCardFormComponent
+  },
+  {
+    path: 'admin/cardform/:id',
+    component: BirthdayCardFormComponent
   }
 ];
 

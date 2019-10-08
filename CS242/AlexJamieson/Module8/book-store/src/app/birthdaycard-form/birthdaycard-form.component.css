@@ -1,14 +1,14 @@
 .form-container {
     display: flex;
     flex-direction: column;
-    margin-top: 1px;
+    margin-top: 20px;
 }
 
 .form-container > * {
     width: 100%;
 }
 
-.book-form-container {
+.card-form-container {
     width: 50%;
     margin: 50px auto;
     min-width: 300px;
