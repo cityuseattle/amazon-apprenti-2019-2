@@ -6,10 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
   private ADD_NEW_BOOK_API = 'http://localhost:8080/book';
+  private ADD_NEW_BIRTHDAY_API = 'http://localhost:8080/birthdayCard';
 
   constructor(private httpClient: HttpClient) { }
 
   addNewBook(book: { title: string; isbn: string; author: string; picture: string, price: number }) {
     return this.httpClient.post(this.ADD_NEW_BOOK_API, book);
+  }
+  addNewBirthday(birthday: { productTitle: string; material: string; picture: string, price: number }) {
+    return this.httpClient.post(this.ADD_NEW_BIRTHDAY_API, birthday);
   }
 }

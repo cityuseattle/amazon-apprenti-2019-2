@@ -12,11 +12,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookFormComponent
+    BookFormComponent,
+    BirthdayCardFormComponent
   ],
   imports: [
     BrowserModule,
