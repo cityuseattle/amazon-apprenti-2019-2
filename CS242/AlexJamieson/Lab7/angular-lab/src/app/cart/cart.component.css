@@ -1,0 +1,7 @@
+.cartTable {
+    text-align: left;
+}
+
+.cartTable td, .cartTable th {
+    padding: 5px 10px;
+}
