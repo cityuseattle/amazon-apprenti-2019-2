@@ -1,6 +1,8 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
 import { ProductsComponent } from './products/products.component';
-import { CustomersComponent } from './customers/customers.component';
-import { Routes } from '@angular/router';
+import { CustomersComponent } from './customers/customers.component'
 
 const routes: Routes = [
   {
@@ -13,4 +15,8 @@ const routes: Routes = [
   },
 ];
 
-
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
