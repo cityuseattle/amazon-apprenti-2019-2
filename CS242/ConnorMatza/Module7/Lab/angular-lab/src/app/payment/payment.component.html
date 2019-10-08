@@ -1,0 +1,14 @@
+<table class='paymentTable'>
+        <thead>
+            <td scope='col'>Name</td>
+            <td scope='col'>Quantity</td>
+            <td scope='col'>Price</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of payment">
+                <td> {{ item.cardNumber }}</td>
+                <td> {{ item.cvv }}</td>
+                <td> {{ item.expiry }}</td>
+            </tr>
+        </tbody>
+    </table>
