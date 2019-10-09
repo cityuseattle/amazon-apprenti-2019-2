@@ -8,6 +8,7 @@ var dotenv_1 = __importDefault(require("dotenv"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var mongoose_1 = __importDefault(require("mongoose"));
 var cors_1 = __importDefault(require("cors"));
+var addCardController_1 = __importDefault(require("./controllers/addCardController"));
 var addBookController_1 = __importDefault(require("./controllers/addBookController"));
 dotenv_1.default.config();
 //Intialize DB
@@ -22,4 +23,5 @@ app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 //Router
 app.post('/book', addBookController_1.default);
+app.post('/birthdayCard', addCardController_1.default);
 app.listen(process.env.port, function () { return console.log("The server is running on http://localhost:" + process.env.port); });
