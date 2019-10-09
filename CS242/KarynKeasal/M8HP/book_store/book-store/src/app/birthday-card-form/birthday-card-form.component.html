@@ -5,11 +5,11 @@
     </ng-template>
     <div class="form-container">
         <mat-form-field>
-            <input matInput placeholder="Product title" type="text" [(ngModel)]="title" required />
+            <input matInput placeholder="Product title" type="text" [(ngModel)]="productTitle" required />
         </mat-form-field>
         <mat-form-field>
            <mat-label>Materials</mat-label>
-           <select matNativeControl required>
+           <select matNativeControl [(ngModel)]="material" required>
                <option value="paper">Paper</option>
                <option value="silk">Silk</option>
                <option value="bamboo">Bamboo</option>

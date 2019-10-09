@@ -3,10 +3,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from '../api.service';
 
-export interface Material {
+/*export interface Material {
   value: string;
   viewValue: string;
-}
+}*/
 
 @Component({
   selector: 'app-birthday-card-form',
@@ -33,7 +33,7 @@ export class BirthdayCardFormComponent implements OnInit {
 
   handleSave() {
     let message: string;
-    if (this.productTitle === '' || this.material === '' || this.picture === '' || this.price < 0)
+    if (this.productTitle === '' || this.material === '' || this.price < 0)
       message = 'Please finish the form with a price equal or greater than 0';
     else {
       message = 'Card is added.';
