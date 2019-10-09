@@ -8,11 +8,15 @@ import addBookController from './controllers/add-book';
 import addCardController from './controllers/add-birthday-card';
 import fetchBooks from './controllers/fetch-books';
 import fetchCards from './controllers/fetch-cards';
+import fetchBook from './controllers/fetch-book';
+import updateBookController from './controllers/update-book';
+import deleteBookController from './controllers/delete-book'
 
 dotenv.config();
 
 // Initilize MongoDB
 mongoose.connect(process.env.DB_URI as string, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.set('useFindAndModify', false);
 const db = mongoose.connection;
 
 const app = express();
@@ -29,5 +33,8 @@ app.post('/book', addBookController)
 app.post('/birthday-card', addCardController)
 app.get('/books', fetchBooks)
 app.get('/cards', fetchCards)
+app.get('/book/:id', fetchBook)
+app.put('/book', updateBookController)
+app.delete('/book/:id', deleteBookController)
 
 app.listen(process.env.port, () => console.log(`The server is running on http://localhost:${process.env.port}`));
