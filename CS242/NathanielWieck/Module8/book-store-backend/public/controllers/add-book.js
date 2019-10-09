@@ -13,3 +13,4 @@ var handler = function (req, res) {
     res.status(200).end();
 };
 exports.default = handler;
+//# sourceMappingURL=add-book.js.map

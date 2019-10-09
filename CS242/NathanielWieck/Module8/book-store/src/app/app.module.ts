@@ -16,11 +16,13 @@ import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { CardFormComponent } from './card-form/card-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookFormComponent,
+    CardFormComponent,
   ],
   imports: [
     BrowserModule,

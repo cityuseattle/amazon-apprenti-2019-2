@@ -9,6 +9,7 @@ var body_parser_1 = __importDefault(require("body-parser"));
 var mongoose_1 = __importDefault(require("mongoose"));
 var cors_1 = __importDefault(require("cors"));
 var add_book_1 = __importDefault(require("./controllers/add-book"));
+var add_birthday_card_1 = __importDefault(require("./controllers/add-birthday-card"));
 dotenv_1.default.config();
 mongoose_1.default.connect(process.env.DB_URI, { useNewUrlParser: true });
 var db = mongoose_1.default.connection;
@@ -17,4 +18,6 @@ app.use(cors_1.default({ origin: 'http://localhost:4200' }));
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.post('/book', add_book_1.default);
+app.post('/birthdayCard', add_birthday_card_1.default);
 app.listen(process.env.port, function () { return console.log("The server is running on http://localhost:" + process.env.port); });
+//# sourceMappingURL=app.js.map

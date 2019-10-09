@@ -6,13 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = __importDefault(require("mongoose"));
 var schema = new mongoose_1.default.Schema({
     title: { type: String, required: true },
-    isbn: { type: String, required: true },
-    author: { type: String, required: true },
+    material: { type: String, required: true },
     picture: { type: String, required: true },
     price: { type: Number, required: true, min: 0 },
 });
-var Book = mongoose_1.default.model('Book', schema);
-exports.addBook = function (title, isbn, author, picture, price) {
-    new Book({ title: title, isbn: isbn, author: author, picture: picture, price: price }).save();
+var Card = mongoose_1.default.model('Card', schema);
+exports.addCard = function (title, material, picture, price) {
+    new Card({ title: title, material: material, picture: picture, price: price }).save();
 };
-//# sourceMappingURL=book.js.map
+//# sourceMappingURL=birthday-card.js.map
