@@ -1,0 +1,29 @@
+{
+  "name": "HP05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc && cp ./src/.env ./public && cp -r ./src/views ./public/views"
+  },
+  "keywords": [],
+  "author": "Amanda",
+  "license": "ISC",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.1",
+    "@types/mongodb": "^3.3.6",
+    "@types/mongoose": "^5.5.19",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.3",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/passport": "^1.0.1",
+    "@types/passport-facebook": "^2.1.9",
+    "typescript": "^3.6.3"
+  }
+}
