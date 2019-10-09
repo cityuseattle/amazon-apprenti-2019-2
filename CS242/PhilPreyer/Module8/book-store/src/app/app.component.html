@@ -7,7 +7,8 @@
   <span>
     <button mat-button [matMenuTriggerFor]="manageMenu">Manage Products</button>
     <mat-menu #manageMenu="matMenu" xPosition="before">
-      <button mat-menu-item [routerLink]="['/admin/bookform']">Add Book</button>
+      <option mat-menu-item [routerLink]="['/admin/bookform']">Add Book</option>
+      <option mat-menu-item [routerLink]="['/admin/birthdaycardform']">Add Birthday Card</option>
     </mat-menu>
   </span>
   <span></span>
