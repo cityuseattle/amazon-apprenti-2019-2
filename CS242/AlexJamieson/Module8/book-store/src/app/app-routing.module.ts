@@ -4,11 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookFormComponent } from './book-form/book-form.component';
 import { BirthdayCardFormComponent } from './birthdaycard-form/birthdaycard-form.component';
 import { BooksComponent } from './books/books.component';
+import { CardsComponent } from './cards/cards.component';
 
 const routes: Routes = [
   {
     path: '',
     component: BooksComponent
+  },
+  {
+    path: 'cards',
+    component: CardsComponent
   },
   {
     path: 'admin/bookform',

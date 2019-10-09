@@ -22,3 +22,6 @@ const Card = mongoose.model<CardModel>('Card', schema);
 export const addCard = (title:string, material:string, picture:string, price:number) => {
     new Card({ title, material, picture, price }).save();
 };
+
+// Find a user based on the username
+export const fetchCards = async () => await Card.find({});
