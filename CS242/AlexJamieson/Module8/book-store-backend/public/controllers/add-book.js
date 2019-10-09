@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var book_1 = require("../models/book");
-var bookHandler = function (req, res) {
+var Handler = function (req, res) {
     var _a = req.body, title = _a.title, isbn = _a.isbn, author = _a.author, picture = _a.picture, price = _a.price;
     try {
         book_1.addBook(title, isbn, author, picture, price);
@@ -12,4 +12,4 @@ var bookHandler = function (req, res) {
     }
     res.status(200).end();
 };
-exports.default = bookHandler;
+exports.default = Handler;

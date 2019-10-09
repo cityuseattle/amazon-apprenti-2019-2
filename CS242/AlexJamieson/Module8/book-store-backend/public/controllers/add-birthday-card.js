@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var birthday_card_1 = require("../models/birthday-card");
-var cardHandler = function (req, res) {
+var Handler = function (req, res) {
     var _a = req.body, title = _a.title, material = _a.material, picture = _a.picture, price = _a.price;
     try {
         birthday_card_1.addCard(title, material, picture, price);
@@ -12,4 +12,4 @@ var cardHandler = function (req, res) {
     }
     res.status(200).end();
 };
-exports.default = cardHandler;
+exports.default = Handler;

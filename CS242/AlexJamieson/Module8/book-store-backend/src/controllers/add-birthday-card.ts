@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import { addCard } from '../models/birthday-card';
 
-const cardHandler = (req: Request, res: Response) => {
+const Handler = (req: Request, res: Response) => {
     const { title, material, picture, price } = req.body;
     try {
         addCard(title, material, picture, price);
@@ -13,4 +13,4 @@ const cardHandler = (req: Request, res: Response) => {
     res.status(200).end();
 }
 
-export default cardHandler;
+export default Handler;

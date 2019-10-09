@@ -24,3 +24,6 @@ const Book = mongoose.model<BookModel>('Book', schema);
 export const addBook = (title:string, isbn:string, author:string, picture:string, price:number) => {
     new Book({ title, isbn, author, picture, price }).save();
 };
+
+// Find a user based on the username
+export const fetchBooks = async () => await Book.find({});

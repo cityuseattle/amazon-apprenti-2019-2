@@ -16,5 +16,4 @@ var Card = mongoose_1.default.model('Card', schema);
 // Create a new card in the database
 exports.addCard = function (title, material, picture, price) {
     new Card({ title: title, material: material, picture: picture, price: price }).save();
-    console.log("Got Here");
 };
