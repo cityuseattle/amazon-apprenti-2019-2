@@ -41,6 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var dynamodb_data_mapper_1 = require("@aws/dynamodb-data-mapper");
 var dynamodbconfig_1 = __importDefault(require("./dynamodbconfig"));
+var book_1 = require("./models/book");
 var mapper = new dynamodb_data_mapper_1.DataMapper({
     client: dynamodbconfig_1.default
 });
@@ -55,22 +56,19 @@ exports.initTables = function () { return __awaiter(void 0, void 0, void 0, func
                 };
                 _a.label = 1;
             case 1:
-                _a.trys.push([1, 4, , 5]);
+                _a.trys.push([1, 3, , 4]);
                 //await mapper.ensureTableExists(User, readWriteCapacity);
                 console.log('before');
-                return [4 /*yield*/, mapper.ensureTableExists(User, readWriteCapacity)];
+                return [4 /*yield*/, mapper.ensureTableExists(book_1.Book, readWriteCapacity)];
             case 2:
                 _a.sent();
-                return [4 /*yield*/, mapper.ensureTableExists(Product, readWriteCapacity)];
-            case 3:
-                _a.sent();
                 console.log('after');
-                return [3 /*break*/, 5];
-            case 4:
+                return [3 /*break*/, 4];
+            case 3:
                 e_1 = _a.sent();
                 console.error(e_1.message);
-                return [3 /*break*/, 5];
-            case 5: return [2 /*return*/];
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
         }
     });
 }); };

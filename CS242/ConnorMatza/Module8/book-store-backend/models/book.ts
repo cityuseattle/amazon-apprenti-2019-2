@@ -1,5 +1,5 @@
 import aws from 'aws-sdk';
-import db from '../dynamo';
+import db from '../dynamodbconfig';
 import mapper from '../dynamodbmapper';
 import {
     attribute,
@@ -20,13 +20,11 @@ export class Book {
   author?: string;
   @attribute()
   picture?: string;
-  @attribute()
-  providers?: string
 }
 
 
-export function createProduct(title: string, weight: number, price: number, amount: number, providers: string) {
-  mapper.put(Object.assign(new Product, {title: title, weight: weight, price: price, amount: amount, providers: providers}))
+export function addBook(title: string, isbn: string, author: string, picture: string, providers: string) {
+  mapper.put(Object.assign(new Book, {title: title, isbn: isbn, author: author, picture: picture,}))
     .then(objectSaved => {
       console.log(objectSaved)
     })
@@ -36,6 +34,6 @@ export function createProduct(title: string, weight: number, price: number, amou
   }
 
   export async function findProduct(title: string) {
-    let user = await mapper.get(Object.assign(new Product, {title: title}));
+    let user = await mapper.get(Object.assign(new Book, {title: title}));
     return user
   }

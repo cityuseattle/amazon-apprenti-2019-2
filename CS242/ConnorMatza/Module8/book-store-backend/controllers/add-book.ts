@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { addBook } from '../models/book';
 import { request } from 'https';
+import { Book } from '../models/book';
  
 const handler = ( req: Request, res: Response ) => {
     const {title, isbn, author, picture, price} = req.body;

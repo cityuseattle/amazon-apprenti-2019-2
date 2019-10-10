@@ -1,6 +1,6 @@
 import {DataMapper} from '@aws/dynamodb-data-mapper'
 import db from './dynamodbconfig';
-import Book from './models/book';
+import { Book } from './models/book';
 const mapper = new DataMapper({
   client: db
 })
@@ -14,8 +14,7 @@ export const initTables = async () => {
   try {
     //await mapper.ensureTableExists(User, readWriteCapacity);
     console.log('before');
-    await mapper.ensureTableExists(User, readWriteCapacity);
-    await mapper.ensureTableExists(Product, readWriteCapacity);
+    await mapper.ensureTableExists(Book, readWriteCapacity);
     console.log('after');
   }
   catch (e) {
