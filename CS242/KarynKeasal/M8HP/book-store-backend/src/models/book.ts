@@ -24,3 +24,5 @@ const Book = mongoose.model<BookModel>('Book', schema);
 export const addBook = (title: string, isbn: string, author: string, picture: string, price: number) => {
     new Book({ title, isbn, author, picture, price }).save();
 };
+
+export const fetchBooks = async () => await Book.find({});
