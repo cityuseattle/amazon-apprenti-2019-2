@@ -12,8 +12,8 @@ var schema = new mongoose_1.default.Schema({
     picture: { type: String, required: true },
     price: { type: Number, required: true, min: 0 },
 });
-var Card = mongoose_1.default.model('Card', schema);
-// Create a new book in the database
+var Card = mongoose_1.default.model('card', schema);
+// Create a new card in the database
 exports.addCard = function (title, material, picture, price) {
     new Card({ title: title, material: material, picture: picture, price: price }).save();
 };

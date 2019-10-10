@@ -7,8 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   private ADD_NEW_CARD_API = 'http://localhost:8080/card';
   private ADD_NEW_BOOK_API = 'http://localhost:8080/book';
+  private FETCH_BOOKS_API = 'http://localhost:8080/books';
   constructor(private httpClient: HttpClient) { }
 
+  fetchBooks() {
+    return this.httpClient.get(this.FETCH_BOOKS_API);
+  }
   addNewCard(card: { title: string; material: string; picture: string, price: number}) {
     return this.httpClient.post(this.ADD_NEW_CARD_API, card);
   }
