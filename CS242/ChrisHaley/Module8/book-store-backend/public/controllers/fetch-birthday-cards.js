@@ -35,28 +35,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose_1 = __importDefault(require("mongoose"));
-//Build a schema and use it to do the validation
-var schema = new mongoose_1.default.Schema({
-    title: { type: String, required: true },
-    material: { type: String, required: true },
-    //Shoud do validation for the picture url here
-    picture: { type: String, required: true },
-    price: { type: Number, required: true, min: 0 },
-});
-var Card = mongoose_1.default.model('Card', schema);
-//Create a new book in the databaes
-exports.addBirthdayCard = function (title, material, picture, price) {
-    new Card({ title: title, material: material, picture: picture, price: price }).save();
-};
-//Find a birthday card based on the card name
-exports.fetchBirthdayCards = function () { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
-    switch (_a.label) {
-        case 0: return [4 /*yield*/, Card.find({})];
-        case 1: return [2 /*return*/, _a.sent()];
-    }
-}); }); };
+var birthday_card_1 = require("../models/birthday-card");
+var handler = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    var cards, err_1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, birthday_card_1.fetchBirthdayCards()];
+            case 1:
+                cards = _a.sent();
+                res.json(cards);
+                return [3 /*break*/, 3];
+            case 2:
+                err_1 = _a.sent();
+                console.error(err_1);
+                res.status(500).end();
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
+        }
+    });
+}); };
+exports.default = handler;

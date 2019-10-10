@@ -3,13 +3,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from '../api.service';
 
-/*//Selector for materials on birthday card page
-export interface Materials {
-  value: string;
-  viewValue: string;
-}*/
-
-
 @Component({
   selector: 'app-birthday-card-form',
   templateUrl: './birthday-card-form.component.html',
@@ -23,15 +16,6 @@ export class BirthdayCardFormComponent implements OnInit {
   private picture: string = '';
   private price: number = 0;
   static URL_REGEXP = /^http(s*):\/\/.+/;
-
-  /*
-  private materials: Materials[] = [
-    {value: 'paper-0', viewValue: 'Paper'},
-    {value: 'plastic-1', viewValue: 'Plastic'},
-    {value: 'metal-2', viewValue: 'Metal'},
-    {value: 'other-3', viewValue: 'Other'},
-  ];
-  */
 
   constructor(
     private route: ActivatedRoute,

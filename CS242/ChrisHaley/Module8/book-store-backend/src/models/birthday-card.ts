@@ -23,3 +23,5 @@ export const addBirthdayCard = (title: string, material: string, picture: string
     new Card({title, material, picture, price }).save(); 
 };
 
+//Find a birthday card based on the card name
+export const fetchBirthdayCards = async () => await Card.find({});

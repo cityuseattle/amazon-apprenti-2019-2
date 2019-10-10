@@ -3,9 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BookFormComponent } from './book-form/book-form.component';
 import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
+import { BooksComponent } from './books/books.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
 
 
 const routes: Routes = [
+  {
+    path: '',
+    component: BooksComponent,
+  },
+  {
+    path: 'admin/birthdaycards',
+    component: BirthdayCardsComponent,
+  },
   {
     path: 'admin/bookform',
     component: BookFormComponent,
