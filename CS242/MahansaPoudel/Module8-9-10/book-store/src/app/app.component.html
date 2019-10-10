@@ -1,10 +1,9 @@
 <mat-toolbar color="primary">
   <span [routerLink]="['/']" class="clickable">Book Store</span>
 
-
   <span class="fill-remaining-space"></span>
-
   <span>
+    <button mat-raised-button color="primary" routerLink="/admin/birthdayCards">Birthday Cards</button>
     <button mat-button [matMenuTriggerFor]="manageMenu">Manage Products</button>
     <mat-menu #manageMenu="matMenu" xPosition="before">
       <button mat-menu-item [routerLink]="['/admin/bookform']">Add Book</button>

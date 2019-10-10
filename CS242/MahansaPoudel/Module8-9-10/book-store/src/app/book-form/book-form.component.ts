@@ -8,12 +8,12 @@ import { ApiService } from '../api.service';
   styleUrls: ['./book-form.component.css']
 })
 export class BookFormComponent implements OnInit {
-private bookId: string;
-private title: string = '';
-private isbn: string = '';
-private author: string = '';
-private picture: string = '';
-private price: number = 0;
+public bookId: string;
+public title: string = '';
+public isbn: string = '';
+public author: string = '';
+public picture: string = '';
+public price: number = 0;
 
 constructor(
 private route: ActivatedRoute,

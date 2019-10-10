@@ -1,0 +1,10 @@
+<main class="main">
+  <div *ngFor="let birthdayCard of birthdayCards" class="birthdayCardList" (click)="openDialog(birthdayCard._id)">
+      <img src="{{birthdayCard.picture}}" alt="{{birthdayCard.title}}" class="birthdayCardsImage"/>
+      <div class="birthdayCardsTitleDiv">
+          <div class="birthdayCardTitle">{{birthdayCard.title}}</div>
+          <div class="birthdayCardSubtitle"><span>{{birthdayCard.material}}</span><span>{{birthdayCard.price}}</span></div>
+      </div>
+      <mat-divider class="birthdayCardDivider"></mat-divider>
+  </div>
+</main>

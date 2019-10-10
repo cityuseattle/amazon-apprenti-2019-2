@@ -1,3 +1,4 @@
+
 import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
@@ -7,6 +8,7 @@ import cors from 'cors';
 import addBookController from './controllers/add-book';
 import addCardController from './controllers/add-card';
 import fetchBooks from './controllers/fetch-books';
+import fetchBirthdayCards from './controllers/fetch-birthdaycards';
 
 dotenv.config();
 
@@ -27,4 +29,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/book', addBookController)
 app.post('/card', addCardController)
 app.get('/books', fetchBooks)
+app.get('/birthdayCards', fetchBirthdayCards)
 app.listen(process.env.port, () => console.log(`The server is running on http://localhost:${process.env.port}`));

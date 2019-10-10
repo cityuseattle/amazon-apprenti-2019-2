@@ -11,6 +11,7 @@ var cors_1 = __importDefault(require("cors"));
 var add_book_1 = __importDefault(require("./controllers/add-book"));
 var add_card_1 = __importDefault(require("./controllers/add-card"));
 var fetch_books_1 = __importDefault(require("./controllers/fetch-books"));
+var fetch_birthdaycards_1 = __importDefault(require("./controllers/fetch-birthdaycards"));
 dotenv_1.default.config();
 // Initialize MongoDB
 mongoose_1.default.connect(process.env.DB_URI, { useNewUrlParser: true });
@@ -26,4 +27,5 @@ app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.post('/book', add_book_1.default);
 app.post('/card', add_card_1.default);
 app.get('/books', fetch_books_1.default);
+app.get('/birthdayCards', fetch_birthdaycards_1.default);
 app.listen(process.env.port, function () { return console.log("The server is running on http://localhost:" + process.env.port); });

@@ -9,11 +9,11 @@ import { ApiService } from '../api.service';
 })
 export class BirthdayFormComponent implements OnInit {
 
-    private birthdayId: string;
-    private title = '';
-    private material = '';
-    private picture = '';
-    private price = 0;
+    public birthdayId: string;
+    public title = '';
+    public material = '';
+    public picture = '';
+    public price = 0;
 
     constructor(
     private route: ActivatedRoute,
