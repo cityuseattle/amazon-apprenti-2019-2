@@ -19,14 +19,16 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { BooksComponent } from './books/books.component';
 import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
 import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     BookFormComponent,
     BooksComponent,
     BookDetailDialogComponent,
-    BirthdayCardFormComponent
+    BirthdayCardFormComponent,
+  ],
+  entryComponents: [
+    BookDetailDialogComponent,
   ],
   imports: [
     BrowserModule,
