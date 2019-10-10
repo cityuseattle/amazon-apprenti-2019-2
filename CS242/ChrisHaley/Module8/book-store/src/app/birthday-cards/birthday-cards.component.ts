@@ -26,8 +26,8 @@ export class BirthdayCardsComponent implements OnInit {
     this.apiService.fetchBirthdayCards().subscribe((data: Array<Card>) => {
       this.cards = data;
       //Tansfer the Birthday Card array to an object to speed up the look up
-      this.birthdayCardsObject = this.cards.reduce((obj, cards) => {
-        obj[cards._id] = cards;
+      this.birthdayCardsObject = this.cards.reduce((obj, card) => {
+        obj[card._id] = card;
         return obj;
       }, {});
       });
@@ -38,6 +38,13 @@ export class BirthdayCardsComponent implements OnInit {
       width: "350px",
       data: this.birthdayCardsObject[id],
     });
+  }
+
+  delete(id: string): void {
+    //Remove the card data from two internal data sources
+    delete this.birthdayCardsObject[id];
+    this.cards = this.cards.filter((card) => card._id !== id );
+    this.apiService.deleteCard(id).subscribe();
   }
 
 }

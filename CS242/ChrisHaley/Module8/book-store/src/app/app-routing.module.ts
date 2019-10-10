@@ -13,7 +13,7 @@ const routes: Routes = [
     component: BooksComponent,
   },
   {
-    path: 'admin/birthdaycards',
+    path: 'birthdaycards',
     component: BirthdayCardsComponent,
   },
   {
