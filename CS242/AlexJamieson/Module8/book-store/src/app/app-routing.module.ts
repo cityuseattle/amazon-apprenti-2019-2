@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { BookFormComponent } from './book-form/book-form.component';
-import { BirthdayCardFormComponent } from './birthdaycard-form/birthdaycard-form.component';
+import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
 import { BooksComponent } from './books/books.component';
-import { CardsComponent } from './cards/cards.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
 
 const routes: Routes = [
   {
@@ -12,8 +12,8 @@ const routes: Routes = [
     component: BooksComponent
   },
   {
-    path: 'cards',
-    component: CardsComponent
+    path: 'birthdaycards',
+    component: BirthdayCardsComponent
   },
   {
     path: 'admin/bookform',
@@ -24,11 +24,11 @@ const routes: Routes = [
     component: BookFormComponent,
   },
   {
-    path: 'admin/cardform',
+    path: 'admin/birthdaycardform',
     component: BirthdayCardFormComponent,
   },
   {
-    path: 'admin/cardform/:id',
+    path: 'admin/birthdaycardform/:id',
     component: BirthdayCardFormComponent,
   }
 ];

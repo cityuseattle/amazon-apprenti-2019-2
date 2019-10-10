@@ -5,12 +5,15 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import addBookController from './controllers/add-book';
-import addCardController from './controllers/add-birthday-card';
+import addBirthdayCardController from './controllers/add-birthday-card';
 import fetchBooks from './controllers/fetch-books';
-import fetchCards from './controllers/fetch-cards';
+import fetchBirthdayCards from './controllers/fetch-birthday-cards';
 import fetchBook from './controllers/fetch-book';
 import updateBookController from './controllers/update-book';
-import deleteBookController from './controllers/delete-book'
+import deleteBookController from './controllers/delete-book';
+import fetchBirthdayCard from './controllers/fetch-birthday-card';
+import updateBirthdayCardController from './controllers/update-birthday-card';
+import deleteBirthdayCardController from './controllers/delete-birthday-card';
 
 dotenv.config();
 
@@ -30,11 +33,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // The router
 app.post('/book', addBookController)
-app.post('/birthday-card', addCardController)
+app.post('/birthday-card', addBirthdayCardController)
 app.get('/books', fetchBooks)
-app.get('/cards', fetchCards)
+app.get('/birthday-cards', fetchBirthdayCards)
 app.get('/book/:id', fetchBook)
+app.get('/birthday-card/:id', fetchBirthdayCard)
 app.put('/book', updateBookController)
+app.put('/birthday-card', updateBirthdayCardController)
 app.delete('/book/:id', deleteBookController)
+app.delete('/birthday-card/:id', deleteBirthdayCardController)
+
 
 app.listen(process.env.port, () => console.log(`The server is running on http://localhost:${process.env.port}`));

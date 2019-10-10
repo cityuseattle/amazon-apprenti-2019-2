@@ -16,11 +16,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookFormComponent } from './book-form/book-form.component';
-import { BirthdayCardFormComponent } from './birthdaycard-form/birthdaycard-form.component';
+import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
 import { BooksComponent } from './books/books.component';
 import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
-import { CardsComponent } from './cards/cards.component';
-import { CardDetailDialogComponent } from './card-detail-dialog/card-detail-dialog.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
+import { BirthdayCardDetailDialogComponent } from './birthday-card-detail-dialog/birthday-card-detail-dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +29,12 @@ import { CardDetailDialogComponent } from './card-detail-dialog/card-detail-dial
     BirthdayCardFormComponent,
     BooksComponent,
     BookDetailDialogComponent,
-    CardsComponent,
-    CardDetailDialogComponent,
+    BirthdayCardsComponent,
+    BirthdayCardDetailDialogComponent,
   ],
   entryComponents: [
     BookDetailDialogComponent,
-    CardDetailDialogComponent
+    BirthdayCardDetailDialogComponent
   ],
   imports: [
     BrowserModule,

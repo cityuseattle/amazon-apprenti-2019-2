@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-type CardModel = mongoose.Document & {
+type BirthdayCardModel = mongoose.Document & {
     title: string;
     material: string;
     picture: string;
@@ -16,12 +16,20 @@ const schema = new mongoose.Schema({
     price: {type: Number, required: true},
 });
 
-const Card = mongoose.model<CardModel>('Card', schema);
+const BirthdayCard = mongoose.model<BirthdayCardModel>('Card', schema);
 
 // Create a new card in the database
-export const addCard = (title:string, material:string, picture:string, price:number) => {
-    new Card({ title, material, picture, price }).save();
+export const addBirthdayCard = (title:string, material:string, picture:string, price:number) => {
+    new BirthdayCard({ title, material, picture, price }).save();
 };
 
 // Find a user based on the username
-export const fetchCards = async () => await Card.find({});
+export const fetchBirthdayCards = async () => await BirthdayCard.find({});
+
+export const fetchBirthdayCard = async (id: string) => await BirthdayCard.find({ _id: id });
+
+export const updateBirthdayCard = async (
+    id: string, title: string, material: string, picture: string, price: number,
+) => await BirthdayCard.findByIdAndUpdate(id, { title, material, picture, price });
+
+export const deleteBirthdayCard = async (id: string) => await BirthdayCard.deleteOne({ _id: id });

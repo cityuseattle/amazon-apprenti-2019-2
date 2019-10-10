@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BirthdayCardFormComponent } from './birthdaycard-form.component';
+import { BirthdayCardFormComponent } from './birthday-card-form.component';
 
-describe('BirthdaycardFormComponent', () => {
+describe('BirthdayCardFormComponent', () => {
   let component: BirthdayCardFormComponent;
   let fixture: ComponentFixture<BirthdayCardFormComponent>;
 

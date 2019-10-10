@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var birthday_card_1 = require("../models/birthday-card");
 var Handler = function (req, res) {
-    var _a = req.body, title = _a.title, material = _a.material, picture = _a.picture, price = _a.price;
+    var id = req.params.id;
     try {
-        birthday_card_1.addBirthdayCard(title, material, picture, price);
+        birthday_card_1.deleteBirthdayCard(id);
     }
     catch (err) {
         console.error(err);
