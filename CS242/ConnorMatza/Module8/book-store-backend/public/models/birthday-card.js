@@ -50,37 +50,33 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var dynamodbmapper_1 = __importDefault(require("../dynamodbmapper"));
 var dynamodb_data_mapper_annotations_1 = require("@aws/dynamodb-data-mapper-annotations");
-var Book = /** @class */ (function () {
-    function Book() {
+var BirthdayCard = /** @class */ (function () {
+    function BirthdayCard() {
     }
     __decorate([
         dynamodb_data_mapper_annotations_1.hashKey(),
         __metadata("design:type", String)
-    ], Book.prototype, "title", void 0);
+    ], BirthdayCard.prototype, "title", void 0);
     __decorate([
         dynamodb_data_mapper_annotations_1.attribute(),
         __metadata("design:type", String)
-    ], Book.prototype, "isbn", void 0);
+    ], BirthdayCard.prototype, "material", void 0);
     __decorate([
         dynamodb_data_mapper_annotations_1.attribute(),
         __metadata("design:type", String)
-    ], Book.prototype, "author", void 0);
-    __decorate([
-        dynamodb_data_mapper_annotations_1.attribute(),
-        __metadata("design:type", String)
-    ], Book.prototype, "picture", void 0);
+    ], BirthdayCard.prototype, "picture", void 0);
     __decorate([
         dynamodb_data_mapper_annotations_1.attribute(),
         __metadata("design:type", Number)
-    ], Book.prototype, "price", void 0);
-    Book = __decorate([
-        dynamodb_data_mapper_annotations_1.table('books')
-    ], Book);
-    return Book;
+    ], BirthdayCard.prototype, "price", void 0);
+    BirthdayCard = __decorate([
+        dynamodb_data_mapper_annotations_1.table('birthdaycards')
+    ], BirthdayCard);
+    return BirthdayCard;
 }());
-exports.Book = Book;
-function addBook(title, isbn, author, picture, price) {
-    dynamodbmapper_1.default.put(Object.assign(new Book, { title: title, isbn: isbn, author: author, picture: picture, price: price }))
+exports.BirthdayCard = BirthdayCard;
+function addBirthdayCard(title, material, picture, price) {
+    dynamodbmapper_1.default.put(Object.assign(new BirthdayCard, { title: title, material: material, picture: picture, price: price }))
         .then(function (objectSaved) {
         console.log(objectSaved);
     })
@@ -88,13 +84,13 @@ function addBook(title, isbn, author, picture, price) {
         console.log(err, err.stack);
     });
 }
-exports.addBook = addBook;
-function findProduct(title) {
+exports.addBirthdayCard = addBirthdayCard;
+function findBirthdayCard(title) {
     return __awaiter(this, void 0, void 0, function () {
         var user;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, dynamodbmapper_1.default.get(Object.assign(new Book, { title: title }))];
+                case 0: return [4 /*yield*/, dynamodbmapper_1.default.get(Object.assign(new BirthdayCard, { title: title }))];
                 case 1:
                     user = _a.sent();
                     return [2 /*return*/, user];
@@ -102,4 +98,4 @@ function findProduct(title) {
         });
     });
 }
-exports.findProduct = findProduct;
+exports.findBirthdayCard = findBirthdayCard;

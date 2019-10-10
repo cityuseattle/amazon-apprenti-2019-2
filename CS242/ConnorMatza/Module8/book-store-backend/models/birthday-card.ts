@@ -10,14 +10,12 @@ import {
 } from '@aws/dynamodb-data-mapper-annotations';
 
 
-@table('books')
-export class Book {
+@table('birthdaycards')
+export class BirthdayCard {
   @hashKey()
   title?: string;
   @attribute()
-  isbn?: string;
-  @attribute()
-  author?: string;
+  material?: string;
   @attribute()
   picture?: string;
   @attribute()
@@ -25,8 +23,8 @@ export class Book {
 }
 
 
-export function addBook(title: string, isbn: string, author: string, picture: string, price: number) {
-  mapper.put(Object.assign(new Book, {title: title, isbn: isbn, author: author, picture: picture, price: price}))
+export function addBirthdayCard(title: string, material: string, picture: string, price: number) {
+  mapper.put(Object.assign(new BirthdayCard, {title: title, material: material, picture: picture, price: price}))
     .then(objectSaved => {
       console.log(objectSaved)
     })
@@ -35,7 +33,7 @@ export function addBook(title: string, isbn: string, author: string, picture: st
     })
   }
 
-  export async function findProduct(title: string) {
-    let user = await mapper.get(Object.assign(new Book, {title: title}));
+  export async function findBirthdayCard(title: string) {
+    let user = await mapper.get(Object.assign(new BirthdayCard, {title: title}));
     return user
   }
