@@ -26,3 +26,10 @@ export const addBook = (title: string, isbn: string, author: string, picture: st
 };
 // Find a user based on the username
 export const fetchBooks = async () => await Book.find({});
+
+export const fetchBook = async () => await Book.find({});
+
+export const updateBook = async (
+    id: string, title: string, isbn: string, author: string, picture: string, price: number) => await Book.findByIdAndUpdate(id, { title, isbn, author, picture, price });
+
+export const deleteBook = async (id: string) => await Book.deleteOne({ _id: id });
