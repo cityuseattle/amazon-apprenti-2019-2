@@ -1,10 +1,14 @@
 <main class="main">
   <div *ngFor="let birthdayCard of birthdayCards" class="birthdayCardList" (click)="openDialog(birthdayCard._id)">
-      <img src="{{birthdayCard.picture}}" alt="{{birthdayCard.title}}" class="birthdayCardsImage"/>
-      <div class="birthdayCardsTitleDiv">
-          <div class="birthdayCardTitle">{{birthdayCard.title}}</div>
-          <div class="birthdayCardSubtitle"><span>{{birthdayCard.material}}</span><span>{{birthdayCard.price}}</span></div>
+    <img src="{{birthdayCard.picture}}" alt="{{birthdayCard.title}}" class="birthdayCardsImage" />
+    <div class="birthdayCardsTitleDiv">
+      <div class="birthdayCardTitle">{{birthdayCard.title}}</div>
+      <div class="birthdayCardSubtitle"><span>{{birthdayCard.material}}</span><span>${{birthdayCard.price}}</span></div>
+      <div>
+        <button mat-button color="primary" [routerLink]="['/admin/cardform/', birthdayCard._id]">Edit</button>
+        <button mat-button color="warn" (click)="delete(birthdayCard._id)">Delete</button>
       </div>
-      <mat-divider class="birthdayCardDivider"></mat-divider>
+    </div>
+    <mat-divider class="birthdayCardDivider"></mat-divider>
   </div>
 </main>

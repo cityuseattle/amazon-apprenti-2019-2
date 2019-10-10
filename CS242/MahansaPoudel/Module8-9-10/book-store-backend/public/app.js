@@ -15,6 +15,9 @@ var fetch_birthdaycards_1 = __importDefault(require("./controllers/fetch-birthda
 var fetch_book_1 = __importDefault(require("./controllers/fetch-book"));
 var update_book_1 = __importDefault(require("./controllers/update-book"));
 var delete_book_1 = __importDefault(require("./controllers/delete-book"));
+var fetch_birthdaycard_1 = __importDefault(require("./controllers/fetch-birthdaycard"));
+var update_birthdaycard_1 = __importDefault(require("./controllers/update-birthdaycard"));
+var delete_birthdaycard_1 = __importDefault(require("./controllers/delete-birthdaycard"));
 dotenv_1.default.config();
 // Initialize MongoDB
 mongoose_1.default.connect(process.env.DB_URI, { useNewUrlParser: true });
@@ -35,4 +38,7 @@ app.get('/birthdayCards', fetch_birthdaycards_1.default);
 app.get('/book/:id', fetch_book_1.default);
 app.put('/book', update_book_1.default);
 app.delete('/book/:id', delete_book_1.default);
+app.get('/birthdayCard/:id', fetch_birthdaycard_1.default);
+app.put('/birthdayCard', update_birthdaycard_1.default);
+app.delete('/birthdayCard/:id', delete_birthdaycard_1.default);
 app.listen(process.env.port, function () { return console.log("The server is running on http://localhost:" + process.env.port); });
