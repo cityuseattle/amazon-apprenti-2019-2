@@ -17,12 +17,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
+import { BooksComponent } from './books/books.component';
+import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
+import { BirthdayCardDetailDialogComponent } from './birthday-card-detail-dialog/birthday-card-detail-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookFormComponent,
     BirthdayCardFormComponent,
+    BooksComponent,
+    BookDetailDialogComponent,
+    BirthdayCardsComponent,
+    BirthdayCardDetailDialogComponent,
+  ],
+
+  entryComponents: [
+    BookDetailDialogComponent, BirthdayCardDetailDialogComponent,
   ],
   imports: [
     BrowserModule,

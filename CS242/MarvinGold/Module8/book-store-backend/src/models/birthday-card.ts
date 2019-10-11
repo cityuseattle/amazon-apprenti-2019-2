@@ -29,5 +29,14 @@ const Card = mongoose.model<CardModel>('Card', schema);
 
 //create Card in DB
 export const addCard = (title: string, material: string, picture: string, price: number) => {
-    new Card({title, material, picture, price}).save();
+  new Card({title, material, picture, price}).save();
 };
+export const updateCard = async (
+    id: string, title: string, material: string, picture: string, price: number,
+) => await Card.findByIdAndUpdate(id, {title, material, picture, price});
+
+export const deleteCard = async (id: string) => await Card.deleteOne({_id: id});
+
+export const fetchCard = async (id: string) => await Card.find({_id: id });
+
+export const fetchCards = async () => await Card.find({});
