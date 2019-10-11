@@ -13,11 +13,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { BooksComponent } from './books/books.component';
+import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookFormComponent, 
+    BookFormComponent,
+    BooksComponent,
+    BookDetailDialogComponent, 
+  ],
+  entryComponents: [
+    BookDetailDialogComponent,
   ],
   imports: [
     BrowserModule,

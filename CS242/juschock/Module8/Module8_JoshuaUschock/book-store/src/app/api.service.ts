@@ -9,6 +9,10 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
+  fetchBooks() {
+    return this.httpClient.get(this.FETCH_BOOKS_API);
+  }
+
   addNewBook(book: { title: string; isbn: string; author: string; picture: string, price: number }) {
   return this.httpClient.post(this.ADD_NEW_BOOK_API, book);
 }

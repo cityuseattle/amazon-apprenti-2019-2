@@ -6,6 +6,8 @@ import cors from 'cors'; 5.2K (gzipped: 2.1K)
 
 import addBookController from './controllers/add-book';
 
+import fetchBooks from './controllers/fetch-books';
+
 dotenv.config();
 
 // Initialize MongoDB
@@ -23,5 +25,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // The router 
 app.post('/book', addBookController)
-
+app.get('/books', fetchBooks)
 app.listen(process.env.port, () => console.log(`The server is running on http://localhost:${process.env.port}`));
