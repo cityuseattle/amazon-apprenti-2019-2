@@ -1,7 +1,7 @@
-import express from 'express';
-import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import express from 'express';
+import dotenv from 'dotenv';
 import passport from 'passport';
 import passportGoogle from 'passport-google-oauth';
 
