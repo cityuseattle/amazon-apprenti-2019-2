@@ -1,11 +1,11 @@
 <main class="birthday-card-form-container">
-    <h2 *ngIf="birthdayId; else hide">Update birthday card information</h2>
+    <h2 *ngIf="birthdayCardId; else hide">Update birthday card information</h2>
     <ng-template #hide>
         <h2>Add a new birthday card</h2>
     </ng-template>
     <div class="form-container">
         <mat-form-field>
-            <input matInput placeholder="Product title" type="text" [(ngModel)]="productTitle" required />
+            <input matInput placeholder="Title" type="text" [(ngModel)]="title" required />
         </mat-form-field>
         <mat-form-field>
            <mat-label>Materials</mat-label>

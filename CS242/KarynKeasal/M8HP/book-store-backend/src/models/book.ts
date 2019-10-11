@@ -26,3 +26,11 @@ export const addBook = (title: string, isbn: string, author: string, picture: st
 };
 
 export const fetchBooks = async () => await Book.find({});
+
+export const fetchBook = async (id: string) => await Book.find({ _id: id });
+
+export const updateBook = async (
+    id: string, title: string, isbn: string, author: string, picture: string, price: number,
+) => await Book.findByIdAndUpdate(id, { title, isbn, author, picture, price });
+
+export const deleteBook = async (id: string) => await Book.deleteOne({ _id: id });
