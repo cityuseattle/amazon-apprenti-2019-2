@@ -2,7 +2,6 @@ import {DataMapper} from '@aws/dynamodb-data-mapper'
 import db from './dynamodbconfig';
 import { Book } from './models/book';
 import { BirthdayCard } from './models/birthday-card';
-
 const mapper = new DataMapper({
   client: db
 })
