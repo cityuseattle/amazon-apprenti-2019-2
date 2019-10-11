@@ -38,4 +38,11 @@ export class BooksComponent implements OnInit {
       data: this.booksObject[id],
     });
   }
+
+delete(id: string): void {
+  // Remove the book data
+  delete this.booksObject[id];
+  this.books = this.books.filter((book) => book._id != id );
+  this.apiService.deleteBook(id).subscribe();
+}
 }

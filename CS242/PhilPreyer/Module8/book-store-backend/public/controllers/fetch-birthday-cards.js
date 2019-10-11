@@ -46,7 +46,6 @@ var handler = function (req, res) { return __awaiter(void 0, void 0, void 0, fun
                 return [4 /*yield*/, birthday_card_1.fetchBirthdayCards()];
             case 1:
                 birthdaycards = _a.sent();
-                console.log("Did this run?");
                 res.json(birthdaycards);
                 return [3 /*break*/, 3];
             case 2:
