@@ -2,7 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule, MatSelectModule, MatDialogModule, MatDividerModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -15,6 +18,8 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
 import { BooksComponent } from './books/books.component';
 import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
+import { BirthdayCardDetailDialogComponent } from './birthday-card-detail-dialog/birthday-card-detail-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +28,12 @@ import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dial
     BirthdayCardFormComponent,
     BooksComponent,
     BookDetailDialogComponent,
+    BirthdayCardsComponent,
+    BirthdayCardDetailDialogComponent,
   ],
   entryComponents: [
     BookDetailDialogComponent,
+    BirthdayCardDetailDialogComponent,
   ],
   imports: [
     BrowserModule,

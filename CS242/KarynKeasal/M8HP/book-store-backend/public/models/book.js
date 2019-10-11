@@ -60,3 +60,21 @@ exports.fetchBooks = function () { return __awaiter(void 0, void 0, void 0, func
         case 1: return [2 /*return*/, _a.sent()];
     }
 }); }); };
+exports.fetchBook = function (id) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
+    switch (_a.label) {
+        case 0: return [4 /*yield*/, Book.find({ _id: id })];
+        case 1: return [2 /*return*/, _a.sent()];
+    }
+}); }); };
+exports.updateBook = function (id, title, isbn, author, picture, price) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
+    switch (_a.label) {
+        case 0: return [4 /*yield*/, Book.findByIdAndUpdate(id, { title: title, isbn: isbn, author: author, picture: picture, price: price })];
+        case 1: return [2 /*return*/, _a.sent()];
+    }
+}); }); };
+exports.deleteBook = function (id) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
+    switch (_a.label) {
+        case 0: return [4 /*yield*/, Book.deleteOne({ _id: id })];
+        case 1: return [2 /*return*/, _a.sent()];
+    }
+}); }); };

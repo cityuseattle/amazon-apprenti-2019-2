@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { addBirthdayCard } from '../models/birthday-card';
+import { deleteBirthdayCard } from '../models/birthday-card';
 
 const handler = (req: Request, res: Response) => {
-    const { title, material, picture, price } = req.body;
+    const { id } = req.params;
     try {
-        addBirthdayCard(title, material, picture, price);
+        deleteBirthdayCard(id);
     } catch (err) {
         console.error(err);
         res.status(500).end();
