@@ -21,3 +21,5 @@ const Card = mongoose.model<BirthdayCardModel>('Card', schema);
 export const addBirthdayCard = (title: string, material: string, picture: string, price: number) => {
     new Card({ title, material, picture, price }).save();
 }
+// Find a user based on the username
+export const fetchBirthdaycards = async () => await Card.find({});

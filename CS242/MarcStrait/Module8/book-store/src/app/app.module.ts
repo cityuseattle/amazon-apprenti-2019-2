@@ -19,6 +19,8 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { BooksComponent } from './books/books.component';
 import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
 import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
+import { BirthdayCardsDialogComponent } from './birthday-cards-dialog/birthday-cards-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,9 +28,12 @@ import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-fo
     BooksComponent,
     BookDetailDialogComponent,
     BirthdayCardFormComponent,
+    BirthdayCardsComponent,
+    BirthdayCardsDialogComponent,
   ],
   entryComponents: [
     BookDetailDialogComponent,
+    BirthdayCardsDialogComponent,
   ],
   imports: [
     BrowserModule,
