@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./birthday-card-form.component.css']
 })
 export class BirthdayCardFormComponent implements OnInit {
-  //private bookId: string;
+  private birthdaycardId: string;
   private title: string = '';
   private material: string = '';
   private picture: string = '';
@@ -23,7 +23,7 @@ export class BirthdayCardFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  
+  this.birthdaycardId = this.route.snapshot.paramMap.get('id');
 }
 
 handleSave() {

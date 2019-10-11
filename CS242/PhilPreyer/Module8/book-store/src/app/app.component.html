@@ -5,8 +5,9 @@
   <span class="fill-remaining-space"></span>
 
   <span>
+    <span [routerLink]="['/birthdaycards']" class="clickable">Birthday Cards</span>
     <button mat-button [matMenuTriggerFor]="manageMenu">Manage Products</button>
-    <mat-menu #manageMenu="matMenu" xPosition="before">
+      <mat-menu #manageMenu="matMenu" xPosition="before">
       <option mat-menu-item [routerLink]="['/admin/bookform']">Add Book</option>
       <option mat-menu-item [routerLink]="['/admin/birthdaycardform']">Add Birthday Card</option>
     </mat-menu>

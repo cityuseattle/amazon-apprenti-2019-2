@@ -16,9 +16,11 @@ const schema = new mongoose.Schema({
     price: { type: Number, required: true, min: 0},
 });
 
-const BirthdayCard = mongoose.model<BirthdayCardModel>('BirtdayCard', schema);
+const BirthdayCard = mongoose.model<BirthdayCardModel>('BirthdayCard', schema);
 
 // Create a new birtdaycard in the database
 export const addBirthdayCard = (title: string, material: string, picture: string, price: number) => {
     new BirthdayCard({ title, material, picture, price }).save();
 };
+
+export const fetchBirthdayCards = async () => await BirthdayCard.find({});
