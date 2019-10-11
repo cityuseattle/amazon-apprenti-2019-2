@@ -7,17 +7,26 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule } from "@angular/forms";
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { BooksComponent } from './books/books.component';
+import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookFormComponent,
+    BooksComponent,
+    BookDetailDialogComponent,
+  ],
+  entryComponents: [
+    BookDetailDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +40,8 @@ import { BookFormComponent } from './book-form/book-form.component';
     FormsModule,
     MatSnackBarModule,
     HttpClientModule,
+    MatDividerModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
