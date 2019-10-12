@@ -5,6 +5,7 @@
 <span class="fill-remaining-space"></span>
 
 <span>
+  <button mat-button [routerLink]="['/admin/birthdayCards']">Birthday Cards</button>
   <button mat-button [matMenuTriggerFor]="manageMenu">Manage Products</button>
   <mat-menu #manageMenu="matMenu" xPosition="before">
     <button mat-menu-item [routerLink]="['/admin/bookform']">Add Book</button>

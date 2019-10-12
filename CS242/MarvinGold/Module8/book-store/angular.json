@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "book-store"
+    }
+  },
+  "defaultProject": "book-store",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
