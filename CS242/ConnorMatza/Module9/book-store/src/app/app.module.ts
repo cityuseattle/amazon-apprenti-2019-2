@@ -19,6 +19,8 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
 import { BooksComponent } from './books/books.component';
 import { BooksDetailPageComponent } from './books-detail-page/books-detail-page.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
+import { BirthdayCardsDetailComponent } from './birthday-cards-detail/birthday-cards-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { BooksDetailPageComponent } from './books-detail-page/books-detail-page.
     BooksDetailPageComponent,
     BooksComponent,
     BooksDetailPageComponent,
+    BirthdayCardsComponent,
+    BirthdayCardsDetailComponent,
   ],
   entryComponents: [
     BooksDetailPageComponent,

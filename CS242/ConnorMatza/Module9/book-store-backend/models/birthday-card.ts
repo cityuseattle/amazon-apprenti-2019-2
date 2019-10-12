@@ -37,3 +37,12 @@ export function addBirthdayCard(title: string, material: string, picture: string
     let user = await mapper.get(Object.assign(new BirthdayCard, {title: title}));
     return user
   }
+
+  export async function fetchBirthdayCards() {
+    let books = [];
+    for await (const item of mapper.scan(BirthdayCard)) {
+      //what is item, is it an object? a JSON string?
+      books.push(item);
+    }
+    return books;
+  }
