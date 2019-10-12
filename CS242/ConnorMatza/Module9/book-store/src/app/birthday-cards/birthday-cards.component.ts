@@ -11,11 +11,11 @@ export interface BirthdayCard {
 @Component({
   selector: 'app-birthday-cards',
   templateUrl: './birthday-cards.component.html',
-  styleUrls: ['./birthday-cards-component.css']
+  styleUrls: ['./birthday-cards.component.css']
 })
 export class BirthdayCardsComponent implements OnInit {
   private birthdaycards: Array<BirthdayCard>;
-  private booksObject: {
+  private birthdayCardsObject: {
     [id: string]: BirthdayCard;
   };
 
@@ -25,7 +25,7 @@ export class BirthdayCardsComponent implements OnInit {
     this.apiService.fetchBirthdayCards().subscribe((data: Array<BirthdayCard>) => {
       this.birthdaycards = data;
       // Transfer the book array to an object to speed up the look up
-      this.booksObject = this.birthdaycards.reduce((obj, birthdaycard) => {
+      this.birthdayCardsObject = this.birthdaycards.reduce((obj, birthdaycard) => {
         obj[birthdaycard._id] = birthdaycard;
         return obj;
       }, {});
@@ -35,8 +35,8 @@ export class BirthdayCardsComponent implements OnInit {
   openDialog(id: string): void {
     this.dialog.open(BirthdayCardsDetailComponent, {
       width: '350px',
-      height: '100%',
-      data: this.booksObject[id],
+      height: '50%',
+      data: this.birthdayCardsObject[id],
     });
   }
 }

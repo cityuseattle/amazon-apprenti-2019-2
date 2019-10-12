@@ -36,6 +36,7 @@ import { BirthdayCardsDetailComponent } from './birthday-cards-detail/birthday-c
   ],
   entryComponents: [
     BooksDetailPageComponent,
+    BirthdayCardsDetailComponent
   ],
   imports: [
     BrowserModule,
