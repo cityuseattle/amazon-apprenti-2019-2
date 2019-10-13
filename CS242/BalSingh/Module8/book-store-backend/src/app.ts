@@ -1,16 +1,10 @@
 import express    from 'express';
-import dotenv     from 'dotenv';
+import dotenv     from 'dotenv';  5.4K (gzipped:2.3K)
 import bodyParser from 'body-parser';
 import mongoose   from 'mongoose';
+import cors       from 'cors'; 5.2K (gzipped: 2.1K)
 
-/* 
-  Cross-Origin Resource Sharing (CORS) is a mechanism that allows restricted
-  resources on a web page to be requested from another domain 
-  outside the domain from which the first resource was served.
-*/
-import cors       from 'cors';
-
-import addBookController from './controllers/addBookController';
+import addBookController from './controllers/add-book';
 
 dotenv.config();
 
@@ -20,13 +14,6 @@ const db = mongoose.connection;
 
 const app = express();
 
-/*
-  A web page may freely embed cross-origin images, stylesheets, scripts, 
-  iframes, and videos. 
-  Certain "cross-domain" requests, notably Ajax requests, are forbidden 
-  by default by the same-origin security policy.
-  Allow Access-Control-Allow-Origin (ACAO) to the given URL.
-*/
 app.use(cors({origin: 'http://localhost:4200' }));
 
 // support parsing of application/json type post data
