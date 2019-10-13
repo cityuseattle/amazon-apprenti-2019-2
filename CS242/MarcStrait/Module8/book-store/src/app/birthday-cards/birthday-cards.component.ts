@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-
 import { BirthdayCardsDialogComponent } from '../birthday-cards-dialog/birthday-cards-dialog.component';
 import { ApiService } from '../api.service';
 
 export interface BirthdayCards {
-  _id: string; title: string; price: number; picture: string;
+  _id: string; title: string; material: string; price: number; picture: string;
 }
 
 @Component({
@@ -35,7 +34,14 @@ export class BirthdayCardsComponent implements OnInit {
   openDialog(id: string): void {
     this.dialog.open(BirthdayCardsDialogComponent, {
       width: '350px',
-      data: this.birthdaycardsObject[id],
+      data: this.birthdaycardsObject[id]
     });
+  }
+  
+  delete(id: string): void {
+  // Remove the card data from two internal data sources
+  delete this.birthdaycardsObject[id];
+  this.birthdaycards = this.birthdaycards.filter((birthdaycard) => birthdaycard._id != id);
+  this.apiService.deleteBirthdayCard(id).subscribe(); 
   }
 }

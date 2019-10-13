@@ -5,9 +5,7 @@
   }
   .birthdaycardList {
     display: grid;
-    grid-template-areas: 
-                        "image titleDiv"
-                        "divider divider";
+    grid-template-areas: "image titleDiv" "divider divider";
     grid-template-columns: 120px 1fr;
   }
   .birthdaycardList:hover {
@@ -22,7 +20,6 @@
   .birthdaycardTitleDiv {
     grid-area: titleDiv;
     padding: 30px 0 0 30px;
-  
   }
   .birthdaycardTitle {
     font-size: 20px;
