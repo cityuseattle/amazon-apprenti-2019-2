@@ -1,0 +1,26 @@
+{
+    "name": "Module2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo This is a test",
+        "copyViews": "cp -R src/views public"
+    },
+
+    "dependencies": {
+        "@types/express": "^4.17.1",
+        "ejs": "^2.7.1",
+        "express": "^4.17.1",
+        "nvm": "^0.0.4"
+    },
+    "devDependencies": {
+        "typescript": "^3.6.3"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

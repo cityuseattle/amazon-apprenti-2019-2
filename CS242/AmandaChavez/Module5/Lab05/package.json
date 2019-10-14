@@ -1,0 +1,29 @@
+{
+  "name": "Module 5 Lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "tsc": "tsc && cp ./src/.env ./public && cp -r ./src/views ./public && cp -r ./src/imgs ./public"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/mongoose": "^5.5.20",
+    "body-parser": "^1.19.0",
+    "braces": ">=2.3.1",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.4",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/passport": "^1.0.1",
+    "@types/passport-google-oauth": "^1.0.41",
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.8"
+  }
+}

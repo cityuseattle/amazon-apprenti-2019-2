@@ -1,0 +1,20 @@
+// 1.	The application should create a web server with Node.js and Express = npm i 
+// 2.	The application should have modules passport-google-oauth and @types/passport-google-oauth
+// 3.	The application should route to a login page that shows a Google login button when a user visit http://localhost:3000
+// (You can use the index.ejs file which has already had a button there)
+
+4.	The application should allow users to login with their Google accounts when they click the Google login button
+
+Note: What you have to do to get necessary information for Google sign in 
+//	    Visit the Google developer console to add a product
+//	    Click the Credentials link
+//	    Create an OAuth 2.0 credential (You can get the client id and client secret from here)
+//	    Select Web Application for the application type
+//	    In the same page, add http://localhost:3000 to Authorized JavaScript origins and add http://localhost:3000/auth/google/callback to Authorized redirect URIs
+
+You may also need take a look at this document for setting up the Passport for Google strategy
+5.	The login process should be handled by Passport
+6.	The application should be redirect to the http://localhost:3000/googleLoginSuccess after login successfully
+7.	The http://localhost:3000/googleLoginSuccess page should show user’s displayName and email address that retrieve from Google
+8.	Compile and run the server
+9.	Push the code to your GitHub repository	

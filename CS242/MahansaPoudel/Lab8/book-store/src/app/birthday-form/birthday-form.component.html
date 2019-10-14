@@ -1,0 +1,29 @@
+<p>birthday-form works!</p>
+<main class="birthday-form-container">
+  <h2 *ngIf="birthdayId; else hide">Update the birthday card informaiton</h2>
+  <ng-template #hide>
+    <h2>Add a new birthday card</h2>
+  </ng-template>
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="Product title" type="text" [(ngModel)]="title" required />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Material select an option</mat-label>
+        <mat-select [(ngModel)]="material">
+          <mat-option value="paper">Paper</mat-option>
+          <mat-option value="plastic">Plastic</mat-option>
+          <mat-option value="metal">Metal</mat-option>
+          <mat-option value="other">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Picture" type="text" [(ngModel)]="picture" required />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Price" type="number" [(ngModel)]="price" required />
+    </mat-form-field>
+    <button mat-raised-button (click)="handleSave()">Save</button>
+  </div>
+</main>
+

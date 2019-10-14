@@ -1,0 +1,13 @@
+<p>Payment Information</p>
+<table class="paymentTable">
+    <thead>
+        <th scope="col">Card Number</th>
+        <th scope="col">Type</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of payment">
+            <td>{{ p.cardNumber }}</td>
+            <td>{{ p.type }}</td>
+        </tr>
+    </tbody>
+</table>
