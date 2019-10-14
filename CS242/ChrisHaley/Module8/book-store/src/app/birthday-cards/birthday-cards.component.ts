@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { BirthdayCardDetailDialogComponent } from '../birthday-card-detail-dialog/birthday-card-detail-dialog.component';
 import { ApiService } from '../api.service';
-import { CachedSource } from 'webpack-sources';
 
 export interface Card { 
   _id: string; title: string; material: string; price: number; picture: string;
