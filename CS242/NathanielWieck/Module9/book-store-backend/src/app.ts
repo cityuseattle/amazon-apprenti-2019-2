@@ -10,6 +10,7 @@ import cors from 'cors';
 import addBookController from './controllers/add-book';
 import addCardController from './controllers/add-birthday-card';
 import fetchBooks from './controllers/fetch-books';
+import fetchCards from './controllers/fetch-cards';
 
 // initiate .env file
 dotenv.config();
@@ -34,5 +35,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/book', addBookController)
 app.post('/birthdayCard', addCardController)
 app.get('/books', fetchBooks)
+app.get('/birthdayCards', fetchCards)
 
 app.listen(process.env.port, () => console.log(`The server is running on http://localhost:${process.env.port}`));

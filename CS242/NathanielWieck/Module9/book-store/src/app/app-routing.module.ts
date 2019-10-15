@@ -6,9 +6,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookFormComponent } from './book-form/book-form.component';
 import { CardFormComponent } from './card-form/card-form.component';
 import { BooksComponent } from './books/books.component';
+import { BirthdayCardsComponent } from './birthday-cards/birthday-cards.component';
 
 // define desired url address to each specific webpage, and where to find corresponding component.ts and defined exported functions
 const routes: Routes = [
+  {
+   path: 'birthdaycards',
+   component: BirthdayCardsComponent, 
+  },
   {
     path: '',
     component: BooksComponent,
