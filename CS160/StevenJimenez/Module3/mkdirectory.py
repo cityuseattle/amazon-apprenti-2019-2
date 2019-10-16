@@ -18,6 +18,6 @@ def makedirectory(ans):
         print("Maybe next time :)")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     answer = input("Do you want to create Module 4-10 directories (y/n): ")
     makedirectory(answer)
