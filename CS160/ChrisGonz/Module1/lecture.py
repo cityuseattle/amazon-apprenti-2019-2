@@ -1,9 +1,8 @@
-num = int(input("enter a number")) 
-if num > 0:
-    print ("the number is positive")
-
-
-    
+def your_name(a): 
+    print("Hello, " + a + " Good Morning!")
 
 
 
+a = input("What is your name: ")
+
+your_name(a)
