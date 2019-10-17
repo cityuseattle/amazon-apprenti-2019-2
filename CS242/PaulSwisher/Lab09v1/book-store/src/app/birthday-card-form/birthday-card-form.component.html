@@ -1,0 +1,30 @@
+<main class="card-form-container">
+    <h2 *ngIf="cardId; else hide">Update the card information</h2>
+    <ng-template #hide>
+      <h2>Add a new Brithday Card</h2>
+    </ng-template>
+    <div class="form-container">
+      <mat-form-field>
+        <input matInput placeholder="Product title" type="text" [(ngModel)]="title" required />
+      </mat-form-field>
+      <mat-form-field>
+        <!--insert drop here-->
+        <mat-label>Select an option</mat-label>
+        <mat-select [(ngModel)]="material">
+          <mat-option>Card materials</mat-option>
+          <mat-option value="Glossy Finish">Glossy Finish</mat-option>
+          <mat-option value="Mat Finish">Mat Finish</mat-option>
+          <mat-option value="Special">Special Order...</mat-option>
+          <mat-option value="Plastic">Plastic</mat-option>
+          <mat-option value="Metal">Metal</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Picture" type="text" [(ngModel)]="picture" required />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Price" type="number" [(ngModel)]="price" required />
+      </mat-form-field>
+      <button mat-raised-button (click)="handleSave()">Save</button>
+    </div>
+  </main>

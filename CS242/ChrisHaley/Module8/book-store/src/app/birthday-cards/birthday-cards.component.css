@@ -1,0 +1,41 @@
+.main {
+    width: 75%;
+    margin: 50px auto;
+    min-width: 300px;
+  }
+  .cardList {
+    display: grid;
+    grid-template-areas: 
+                        "image titleDiv"
+                        "divider divider";
+    grid-template-columns: 120px 1fr;
+  }
+  .cardList:hover {
+    cursor: pointer;
+  }
+  .cardImage {
+    grid-area: image;
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .cardTitleDiv {
+    grid-area: titleDiv;
+    padding: 30px 0 0 30px;
+  
+  }
+  .crdTitle {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .cardSubtitle {
+    font-size: 13px;
+    color: gray;
+  }
+  .cardSubtitle span {
+    margin-right: 10px;
+  }
+  .cardDivider {
+    grid-area: divider;
+    margin-bottom: 20px;
+  }
