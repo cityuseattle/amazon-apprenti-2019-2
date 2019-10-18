@@ -6,7 +6,6 @@ while True:
         if len(password) < 8:
             print('Your password is too short.\n')
         else:
-            print(type(password))
             hpasswd = hashlib.sha256(password.encode())
             print('This is your hashed password: ' + hpasswd.hexdigest())
             break
