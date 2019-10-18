@@ -16,7 +16,12 @@ def rotate(matrix):
     print(matrix[::-1])
     outmatrix = zip(*matrix[::-1])
     return outmatrix
+testgrid = list(rotate(grid))
+for i in testgrid:
+    print(i)
+    ##print("\n")
 print(str(list((rotate(grid)))))
+
 
 
 def testrotate(matrix):

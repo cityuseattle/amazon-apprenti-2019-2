@@ -100,12 +100,14 @@ Example:
 
 print("Question 1")
 testlist = ['k', 'b', 'c']
+print("testlist", testlist)
 tupletestlist = tuple(testlist)
 print(testlist)
 print(tupletestlist)
 
 print("Question 2")
 testtuple = ("k", "b", "c")
+print("testtuple", testtuple)
 listtesttuple = list(testtuple)
 print(testtuple)
 print(listtesttuple)
@@ -122,11 +124,13 @@ print(len(testnested))
 
 print("Question 5")
 testremoval = [5,10,"twenty"]
+print("preremoval", testremoval)
 print(testremoval.pop(1))
 print(testremoval)
 
 print("Question 6")
 testremovaltuple = (5, 10 , "twenty")
+print("preremoval", testremovaltuple)
 testremovaltuple = [x for x in testremovaltuple if x != "twenty"]
 print(testremovaltuple)
 
@@ -138,15 +142,11 @@ def squaredictionary(num):
     return out
 squaredict = squaredictionary(10)
 print(squaredict)
-squaredict.pop(10)
-squaredict.pop(9)
-squaredict[10] = 100
-squaredict[9] = 81
-print(squaredict)
+
 print("Question 8")
 ## Question doesn't make any sense. dicts have no defined output order, and thus reversing them is isn't possible nor desireable.
 ##Please clarify
-print(sorted(squaredict.items(), reverse=True))
+print("sorted", sorted(squaredict.items(), reverse=True))
 squaredictmap = dict(map(lambda x: (x[1], x[0]), squaredict.items()))
 print(squaredictmap)
 print("Question 9")
@@ -158,6 +158,7 @@ def createdaysofweekdictionary():
 print(createdaysofweekdictionary())
 
 print("Question 10")
+print("Sorted by Value")
 print(dict(sorted(createdaysofweekdictionary().items(), key=lambda x: x[1])))
 
 
@@ -173,6 +174,7 @@ def move_zeroes(nums):
         else:
             ptr += 1
 move_zeroes_test = [0,1,0,3, 4,5]
+print("pre move zeroes", move_zeroes_test)
 move_zeroes(move_zeroes_test)
 print(move_zeroes_test)
 
@@ -192,33 +194,37 @@ def maxthreeproduct(nums):
 
 testcase = [[1,2,3], [-1,0,100], [-50,-20, 1, 1, 1, 34, 100], [-1,-2,-3], [-3,-4, -10, 10, 40]]
 for i in range(len(testcase)):
+    print(testcase[i], "testcase")
     print(maxthreeproduct(testcase[i]))
 
 print("Question 13")
 def deleteval(nums, val):
-    ptr = 0
-    while ptr < len(nums):
-        if nums[ptr] == val:
-            nums.pop(ptr)
-        else:
-            ptr +=1
+    nums = [x for x in nums if x != val]
+    return nums
 deletevaltest = [0,1,2,2,3,0,4,2 ]
-deleteval(deletevaltest, 2)
-print(deletevaltest)
+print("predeleteval", deletevaltest)
+postdeletevaltest = deleteval(deletevaltest, 2)
+print(len(postdeletevaltest))
+print("postdeleteval", postdeletevaltest)
 
 print("Question 14")
 fourteentestcase = ["apple", "orange", "banana", "kiwi", "mango", "pineapple"]
+print("pre manipulation", fourteentestcase)
 #1
+print("Longest word")
 longestword = max(fourteentestcase, key=len)
 print(longestword)
 #2
+print("Shortestword")
 shortestword = min(fourteentestcase, key=len)
 print(shortestword)
 #3
+print("Even Fruits")
 evenfruits = list(filter(lambda x: len(x) % 2 == 0, fourteentestcase))
 print(evenfruits, len(evenfruits))
 
 #4
+print("Odd Fruits")
 oddfruits = list(filter(lambda x: len(x) % 2 != 0, fourteentestcase))
 print(oddfruits, len(oddfruits))
 
@@ -230,7 +236,7 @@ def removeallthing(list, thing):
         list.remove(thing)
 
 removealltestlist = ["a", "a", "b", "c", "f", "a"]
-
+print("removealltestlist")
 removeallthing(removealltestlist, "a")
 print(removealltestlist)
 
