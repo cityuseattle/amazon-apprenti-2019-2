@@ -1,0 +1,41 @@
+.main {
+  width: 75%;
+  margin: 50px auto;
+  min-width: 300px;
+}
+.birthdayCardList {
+  display: grid;
+  grid-template-areas:
+                      "image titleDiv"
+                      "divider divider";
+  grid-template-columns: 120px 1fr;
+}
+.birthdayCardList:hover {
+  cursor: pointer;
+}
+.birthdayCardsImage {
+  grid-area: image;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.birthdayCardsTitleDiv {
+  grid-area: titleDiv;
+  padding: 30px 0 0 30px;
+
+}
+.birthdayCardTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+.birthdayCardSubtitle {
+  font-size: 13px;
+  color: gray;
+}
+.birthdayCardSubtitle span {
+  margin-right: 10px;
+}
+.birthdayCardDivider {
+  grid-area: divider;
+  margin-bottom: 20px;
+}

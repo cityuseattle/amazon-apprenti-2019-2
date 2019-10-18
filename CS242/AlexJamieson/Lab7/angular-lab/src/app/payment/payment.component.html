@@ -1,0 +1,14 @@
+<table class="paymentTable">
+    <thead>
+        <th scope="col">ID</th>
+        <th scope="col">Card Number</th>
+        <th scope="col">Type</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let payment of payment">
+            <td>{{ payment.id}}</td>
+            <td>{{ payment.cardNumber }}</td>
+            <td>{{ payment.type }}</td>
+        </tr>
+    </tbody>
+</table>

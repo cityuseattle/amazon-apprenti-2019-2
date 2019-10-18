@@ -1,0 +1,18 @@
+<p>Payment List</p>
+<table class="paymentTable">
+    <thead>
+        <th scope="col">Payment Type</th>
+        <th scope="col">Card Number</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let payment of payments">
+            <td>{{ payment.type }}</td>
+            <td>
+                <span *ngIf="!payment.isHiddenPayment; else hide">{{ payment.cardNumber }}</span>
+                <ng-template #hide>
+                    <span>*************</span>
+                </ng-template>
+            </td>
+        </tr>
+    </tbody>
+</table>

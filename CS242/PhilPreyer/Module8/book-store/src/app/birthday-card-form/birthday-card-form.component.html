@@ -1,0 +1,27 @@
+<main class="birthday-card-container">
+    <h2 *ngIf="bookId; else hide">Update the Birthday Card information</h2>
+    <ng-template #hide>
+      <h2>Add a new Birthday Card</h2>
+    </ng-template>
+    <div class="form-container">
+      <mat-form-field>
+        <input matInput placeholder="Product Title" type="text" [(ngModel)]="title" required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Material</mat-label>
+        <select matNativeControl [(ngModel)]="material" required>
+          <option value="paper">Paper</option>
+          <option value="plastic">Plastic</option>
+          <option value="metal">Metal</option>
+          <option value="other">Other</option>
+        </select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Picture" type="text" [(ngModel)]="picture" required />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Price" type="number" [(ngModel)]="price" required />
+      </mat-form-field>
+      <button mat-raised-button (click)="handleSave()">Save</button>
+    </div>
+  </main>
