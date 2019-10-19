@@ -2,7 +2,7 @@ import './Card.css';
 import React from 'react';
 
 //classNAme is an attribute of react not class. 
-const App: React.FC = () => {
+const Card: React.FC = () => {
   return (
   <div className="card">
     <div className="cardTitle">
@@ -37,4 +37,4 @@ const App: React.FC = () => {
 );
 }
   
-  export default App;
+  export default Card;
