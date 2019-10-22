@@ -15,7 +15,7 @@ export class BookFormComponent implements OnInit {
   private author: string = '';
   private picture: string = '';
   private price: number = 0;
-  static URL_REGEXP = /^http(s*):\/\/.+/;
+  
 
   constructor(
     private route: ActivatedRoute,
