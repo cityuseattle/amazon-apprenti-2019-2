@@ -3,16 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { BookFormComponent } from './book-form/book-form.component';
+import { BooksComponent } from './books/books.component';
 
 const routes: Routes = [
   {
-    path: 'bookform',
+    path: 'admin/bookform',
     component: BookFormComponent,
   },
   {
-    path:'bookform/:id',
+    path:'admin/bookform/:id',
     component: BookFormComponent,
   },
+  {
+    path: '',
+    component: BooksComponent,
+  }
 ];
 
 @NgModule({
