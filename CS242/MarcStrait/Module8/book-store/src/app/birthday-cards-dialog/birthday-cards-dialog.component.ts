@@ -11,7 +11,7 @@ export class BirthdayCardsDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<BirthdayCardsDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: BirthdayCards) {}
+    @Inject(MAT_DIALOG_DATA) public data: BirthdayCards) { }
   
     onNoClick(): void {
       this.dialogRef.close();
