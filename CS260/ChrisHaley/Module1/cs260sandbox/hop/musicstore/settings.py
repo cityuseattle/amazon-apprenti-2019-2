@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'testproject.payment',
+    'musicstore.payment',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'testproject.urls'
+ROOT_URLCONF = 'musicstore.urls'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STATICFILES_DIRS = [
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'testproject.wsgi.application'
+WSGI_APPLICATION = 'musicstore.wsgi.application'
 
 
 # Database

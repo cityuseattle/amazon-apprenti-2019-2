@@ -14,6 +14,12 @@
     </div>
 
     <!-- Main Content -->
-    <p>User's agent is: {{ request.META.HTTP_USER_AGENT }}</p>
+    <!-- ORIGINAL CODE: <p>User's agent is: {{ request.META.HTTP_USER_AGENT }}</p> -->
+    <div style="text-align: center;">
+        <p>Payment type: {{ payment_type }}</p>
+        <p>Discount: {{ discount }}%</p>
+        <p>City: {{ address.city }}</p>
+        <p>Zipcode: {{ address.zipcode }}</p>
+    </div>
 
 {% endblock%}
