@@ -64,11 +64,13 @@ TEMPLATES = [
         'DIRS': ['%s/templates/' % (PROJECT_DIR),],
         'APP_DIRS': True,
         'OPTIONS': {
+            'string_if_invalid': "**** WARNING INVALID VARIABLE %s ****",
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'musicstore.processors.hotline.hotline',
             ],
         },
     },

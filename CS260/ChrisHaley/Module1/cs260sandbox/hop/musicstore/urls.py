@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='homepage.html')),
     url(r'^payment/', include('musicstore.payment.urls', namespace="payment_ns")),
+    url(r'^events/', include('musicstore.events.urls', namespace="events_ns")),
 ]
