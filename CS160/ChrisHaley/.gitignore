@@ -1,6 +1,5 @@
-./Tic-Tac-Toe/tic-tac-toe-copy.py
-./Exercises/debugging_area.py
-./Exercises/logging_demo.py
-./Exercises/in-class-demo.py
-./Exercises/class_exercise.py
+Exercises/debugging_area.py
+Exercises/logging_demo.py
+Exercises/in-class-demos.py
+Exercises/class_exercise.py
 .DS_Store

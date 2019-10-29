@@ -55,8 +55,6 @@ class Point3D(Point):
         Point.move_points(self, x, y)
         self.z += z
 
-   
-
 
 print()
 pt1 = Point(100, 100)

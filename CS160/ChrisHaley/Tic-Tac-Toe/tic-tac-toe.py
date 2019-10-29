@@ -119,9 +119,13 @@ def gameOptions(firstPlayer):
         option = input("What type of game would you like to play?\n1: Player vs Computer\n2: Player vs Player\n")
 
     #Get a valid option for going first or second   
-    print("Player 1 will be '0' and Player 2 will be 'X'")
+    print("Player 1 will be '0' and Player 2 will be 'X'\nIn Player vs Computer games, the computer will be Player 2")
     while firstPlayer != 1 and firstPlayer != 2:
-        choice = input('Would Player 1 like to go first or second? (1/2) The computer is Player 2\n')
+        if option != '2':
+            choice = input('Would Player 1 like to go first or second? (1/2)\n')
+        else:
+            choice = input('Would Player 1 like to go first or second? (1/2) The computer is Player 2\n')
+
         if choice == '1':
             firstPlayer = 1
         elif choice == '2':
@@ -137,7 +141,10 @@ def gameOptions(firstPlayer):
 def playerMove(currentPlayer):
     move = ''
     while not str(move).isdigit() or len(str(move)) != 1 or move == 0:
-        move = int(input('Player {} go: (1-9)'.format(currentPlayer)))
+        try:
+            move = int(input('Player {} go: (1-9)'.format(currentPlayer)))
+        except ValueError:
+            continue
     return move - 1
 
 
