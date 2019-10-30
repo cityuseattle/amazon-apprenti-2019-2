@@ -1,10 +1,15 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
+from django.contrib import messages
 
 # Create your views here.
 
 # Set default payment type to credit card
 def pay(request, payment_type="Creditcard", discount=0):
+
+    messages.add_message(request, messages.ERROR, 'Transation fee for international cards is 3%')
+    #import pdb; pdb.set_trace()
+
     # 'city' has value 'Seattle' or '' if city not in url
     # 'zipcode' has value '98101' or '' if zipcode not in url
     city = request.GET.get('city', 'N/A')

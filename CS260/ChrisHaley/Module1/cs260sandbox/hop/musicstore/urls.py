@@ -1,4 +1,4 @@
-"""testproject URL Configuration
+"""musicstore URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -20,9 +20,18 @@ from django.contrib import admin
 
 from musicstore.payment import views as payment_views
 
+# for debugging purposes
+from django.conf import settings
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='homepage.html')),
     url(r'^payment/', include('musicstore.payment.urls', namespace="payment_ns")),
     url(r'^events/', include('musicstore.events.urls', namespace="events_ns")),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
