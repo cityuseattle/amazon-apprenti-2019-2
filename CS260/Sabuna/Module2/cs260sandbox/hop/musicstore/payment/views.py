@@ -6,7 +6,7 @@ def pay(request, payment_type="Creditcard", discount=0):
     zipcode =request.GET.get('zipcode', 'N/A')
     #create an address dictionary
     address={'city':city, 'zipcode': zipcode}
-    return render(request, 'payment/pay.html', {'address': address, 'payment': payment_type, 'discount':discount})
+    return render(request, 'payment/pay.html', {'address': address, 'payment_type': payment_type, 'discount':discount})
     
 def help(request):
     return render(request, 'payment/help.html')
