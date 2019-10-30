@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block main%}
+
+<!-- Main Section Heading -->
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Payment</h2>
+
+<!-- Icon Divider -->
+<div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
+    </div>
+    <div class="divider-custom-line"></div>
+</div>
+
+<!-- Main Content -->
+<div style="text-align: center;">
+    <p>Payment type: {{ payment_type }}</p>
+    <p>Discount: {{ discount }}%</p>
+    <p>City: {{ address.city }}</p>
+    <p>Zipcode: {{ address.zipcode }}</p>
+</div>
+
+{% endblock%}
