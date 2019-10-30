@@ -12,6 +12,7 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end(content);
+    console.log(req.connection.remoteAddress);
 });
 
 server.listen(port, () => console.log(`Server is running at http://${hostname}:${port}`));
