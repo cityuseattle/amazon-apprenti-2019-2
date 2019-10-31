@@ -25,7 +25,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # POINTS DIRECTLY TO TEMPLATE
     url(r'^$',TemplateView.as_view(template_name='homepage.html')),
-    url(r'^payment/$', payment_views.pay),
-    url(r'^payment/help$', payment_views.help),
+    # POINTS TO APP SUB URL FILE, SPECIFIC URLS DEFINED THERE
     url(r'^payment/', include('testproject.payment.urls',namespace="payment_ns")),
 ]
