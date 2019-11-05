@@ -4,3 +4,4 @@ node_modules
 bin/
 lib/
 include/
+.venv/
