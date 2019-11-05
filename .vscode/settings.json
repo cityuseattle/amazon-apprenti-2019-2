@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
     "editor.snippetSuggestions": "none",
     "editor.suggestOnTriggerCharacters": false
+=======
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+>>>>>>> 0717ab909833025416642db2c4fc71517bd57978
 }

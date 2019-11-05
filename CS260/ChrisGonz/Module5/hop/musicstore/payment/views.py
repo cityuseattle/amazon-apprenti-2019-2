@@ -7,8 +7,11 @@ from django.contrib import messages
 # Set default payment type to creditcard
 def pay(request, payment_type="Creditcard",discount=0):
 
+<<<<<<< HEAD
     import pdb; pdb.set_trace()
 
+=======
+>>>>>>> 0717ab909833025416642db2c4fc71517bd57978
     # 'city' has value 'Seattle' or '' if city not in url
     # 'zipcode' has value '98101' or '' if zipcode not in url
     city = request.GET.get('city', 'N/A')
