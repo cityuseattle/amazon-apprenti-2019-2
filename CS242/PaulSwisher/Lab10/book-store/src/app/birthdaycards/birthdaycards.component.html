@@ -1,0 +1,13 @@
+<main class="main">
+    <div *ngFor="let birthdaycard of birthdaycards" class="birthdaycardList" (click)="openDialog(birthdaycard._id)">
+        <img alt="{{birthdaycard.title}}" src="{{birthdaycard.picture}}" class="birthdaycardImage" />
+        <div class="birthdaycardTitleDiv">
+            <div class="birthdaycardTitle">{{birthdaycard.title}}</div>
+            <div class="birthdaycardSubtitle"><span>{{birthdaycard.material}}</span><span>${{birthdaycard.price}}</span></div>
+            
+            <button mat-button color="primary" [routerLink]="['/admin/birthdaycardform/', birthdaycard._id]">Edit</button>
+            <button mat-button color="warn" (click)="delete(birthdaycard._id)">Delete</button>
+           </div>
+        <mat-divider class="birthdaycardDivider"></mat-divider>
+    </div>
+    </main>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 40% 1fr;
+      grid-column-gap: 15px;
+    }
+    .container > img {
+      width: 100%;
+      height: auto;
+      align-self: center;
+    }
+    .innerContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      align-items: center;
+    }
+    .innerContainer > img {
+      width: 100%;
+    }
+    .innerContainer > article > table {
+      width: 100%;
+      text-align: left;
+    }
+    
+    @media only screen and (max-width:1300px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 6vw;
+      }
+    }
+    @media only screen and (max-width:700px) {
+      .innerContainer {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <title>Axe Capital</title>
+</head>
+<body>
+  <div class="container">
+    <img alt="Axe Capital Office" src="https://res.cloudinary.com/orderstaker/image/upload/v1566932660/others/AxeCapital1.jpg" />
+    <div>
+      <h1>This is an important report</h1>
+      <div class="innerContainer">
+        <img alt="Financial Chart" src="https://res.cloudinary.com/orderstaker/image/upload/v1567012029/others/FinancialChart.png" />
+        <article>
+          <p>
+            There are four types of financial statements. The first one is the balances sheet that 
+            equates assets and liabilities. The second one is the income statement that takes into 
+            account the revenue and the expenses and matches them. The third one is the cash flow 
+            statement that looks at the cash transactions and non-cash transactions and finds out 
+            about the cash inflow and cash outflow. 
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Value</th>
+                <th scope="col">Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Item1</td>
+                <td>$1,000,000</td>
+                <td>+50%</td>
+              </tr>
+              <tr>
+                <td>Item2</td>
+                <td>$5,000</td>
+                <td>+10%</td>
+              </tr>
+              <tr>
+                <td>Item3</td>
+                <td>$10,000</td>
+                <td>-10%</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
