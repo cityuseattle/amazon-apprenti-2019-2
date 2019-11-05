@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block header %}
+<!-- THIS TITLE variable is defined in the corresponding payment views.py add_payment method return statement, third parameter -->
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ title }}</h2>
+{% endblock header %}
+
+{% block main%}
+
+<!-- Main Content -->
+
+<!-- THIS ACTION variable is defined in the corresponding payment views.py add_payment method return statement, third parameter -->
+<!-- 'POST SUCCESFUL variable also exactly defined in same place -->
+{% if action == 'POST_SUCCESSFUL' %}
+<div class="alert alert-success" role="alert">
+    The payment method has been added. <a href="/" class="alert-link">Go to homepage</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<!-- 'POST FAILED variable also exactly defined in same place -->
+{% elif action == 'POST_FAILED' %}
+<div class="alert alert-danger" role="alert">
+    Failed to add payment method! Please check the error messages.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %}
+
+<!-- ACTUAL DISPLAY OF FORM FOR USER INPUT BELOW -->
+<!-- THIS is where request method is dictated for the corresponding payment views.py add_payment method -->
+<!-- USE <form> tags anytime need to use a form, and then the csrf_token is the next first line -->
+<form method="POST">
+    {% csrf_token %}
+
+    <table
+        style="margin-left:auto; margin-right:auto; margin-bottom:50px; border-collapse: separate;border-spacing: 50px 0;">
+        <!-- THIS FORM variable is defined in the corresponding payment views.py add_payment method return statement, third parameter -->
+        {% for field in form %}
+        <tr>
+            <td>
+                {{ field.label_tag }}
+            </td>
+            <td>
+                <span class="float-left">{{ field }}</span>
+                <span class="float-left">
+                    {% for error in field.errors %}
+                    <div style="color: #FF5733; padding-left: 0.5rem;">{{error}}</div>
+                    {% endfor %}
+                </span>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div style="text-align: center;">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+{% endblock%}
