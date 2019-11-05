@@ -1,0 +1,11 @@
+{
+    "dev": {
+        "app_function": "models.py",
+        "profile_name": null,
+        "project_name": "hop",
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-k2ahd8xjx",
+        "aws_region": "us-west-2",
+        "aws_access_key_id": "bq7m61vcf1"
+    }
+}
