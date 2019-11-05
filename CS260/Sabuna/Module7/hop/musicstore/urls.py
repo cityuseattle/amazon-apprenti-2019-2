@@ -3,6 +3,7 @@ from django.conf.urls import url
 from django.views.generic import TemplateView
 from django.contrib import admin
 
+
 # For debugging purposes
 from django.conf import settings
 
@@ -14,10 +15,10 @@ urlpatterns = [
     url(r'^song_mgt/', include('musicstore.song_mgt.urls',namespace="song_mgt_ns")),
 ]
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns += [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    ]
+# if settings.DEBUG:
+#     import debug_toolbar
+#     urlpatterns += [
+#         url(r'^__debug__/', include(debug_toolbar.urls)),
+#     ]
 
     
