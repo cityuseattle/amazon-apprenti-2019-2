@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'musicstore.payment',
+    'musicstore.song_mgt',
 ]
 
 MIDDLEWARE = [

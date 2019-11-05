@@ -42,6 +42,7 @@ export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/Scripts:$PATH"
+PATH="$PATH:C:\oracle\instantclient_19_3"
 export PATH
 
 # unset PYTHONHOME if set
@@ -74,3 +75,9 @@ fi
 if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
     hash -r
 fi
+
+export RDS_DB_NAME=DJANGO
+export RDS_DB_USERNAME=admin
+export RDS_DB_PASSWORD=H3lvetia1!
+export RDS_HOSTNAME=database-django-testing-3.cebxmljii3h7.us-east-2.rds.amazonaws.com
+export RDS_PORT=1521
