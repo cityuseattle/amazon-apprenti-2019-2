@@ -1,4 +1,4 @@
-#!c:\users\cmatza\documents\amazon-apprenti-2019-2\.venv\scripts\python.exe
+#!c:\users\connormatza\apprenti\amazon-apprenti-2019-2\.venv\scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

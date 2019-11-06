@@ -28,7 +28,7 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
-    if [ ! "$1" = "nondestructive" ] ; then
+    if [ ! "${1:-}" = "nondestructive" ] ; then
     # Self destruct!
         unset -f deactivate
     fi
@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\cmatza\Documents\amazon-apprenti-2019-2\.venv"
+VIRTUAL_ENV="C:\Users\ConnorMatza\apprenti\amazon-apprenti-2019-2\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -76,8 +76,9 @@ if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
     hash -r
 fi
 
+
 export RDS_DB_NAME=DJANGO
+export RDS_HOSTNAME=database-django-testing-3.cebxmljii3h7.us-east-2.rds.amazonaws.com
 export RDS_DB_USERNAME=admin
 export RDS_DB_PASSWORD=H3lvetia1!
-export RDS_HOSTNAME=database-django-testing-3.cebxmljii3h7.us-east-2.rds.amazonaws.com
 export RDS_PORT=1521
