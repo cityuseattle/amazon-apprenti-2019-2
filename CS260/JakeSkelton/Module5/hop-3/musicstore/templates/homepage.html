@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Homepage</h2>
+{% endblock header %}
+
+{% block main%}
+
+<!-- Main Content -->
+<div style="text-align: center;">
+    <a class="btn btn-primary" href="{% url 'payment_ns:pay' %}" role="button"
+        style="margin: 50px;font-size: 30px;font-weight: bold;">View Payment</a>
+    <a class="btn btn-primary" href="{% url 'payment_ns:help' %}" role="button"
+        style="margin: 50px;font-size: 30px;font-weight: bold;">Payment Assistance</a>
+</div>
+
+{% include "divider.html" with icon_class="divider-custom-icon" icon="fas fa-star" %}
+<div style="text-align: center;">
+    <p><b>Hotline:</b> {{ HOTLINE.name }} - {{ HOTLINE.phone }}</p>
+</div>
+
+{% endblock%}
