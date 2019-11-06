@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span [routerLink]="['/']" class="clickable">Book Store</span>
+  <!-- This fills the remianing space of the current row -->
+<span class="fill-remaining-space"></span>
+
+<span flex>
+  <button mat-button [routerLink]="['/admin/birthdaycard']">Birthday Cards </button>
+  <button mat-button [matMenuTriggerFor]="manageMenu">Manage Product</button>
+ 
+  <mat-menu #manageMenu="matMenu" xPosition="before">
+    <button mat-menu-item [routerLink]="['/admin/book-form']">Add Book</button>
+    <button mat-menu-item [routerLink]="['/admin/birthdaycardform']">Add Birthday Card</button>
+  </mat-menu></span>
+<span></span>
+</mat-toolbar>
+<router-outlet></router-outlet>

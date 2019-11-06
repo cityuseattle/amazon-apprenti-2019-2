@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <span [routerLink]="['/']" class="clickable">Book Store</span>
+
+  <span class="fill-remaining-space"></span>
+
+  <span>
+    <button mat-button [routerLink]="['/birthdaycards']">Birthday Cards</button>
+    <button mat-button [matMenuTriggerFor]="manageMenu">Manage Products</button>
+    <mat-menu #manageMenu="matMenu" xPosition="before">
+    <!-- routerLink below must match exact file path as defined in app-routing.module -->
+      <button mat-menu-item [routerLink]="['/admin/bookform']">Add Book</button>
+      <button mat-menu-item [routerLink]="['/admin/birthdaycardform']">Add Birthday Card</button>
+    </mat-menu>
+  </span>
+  <span></span>
+</mat-toolbar>
+<router-outlet></router-outlet>

@@ -1,0 +1,8 @@
+.customerTable
+ {
+   text-align: left;
+ }
+ .customerTable td, .customerTable th {
+   padding: 5px 10px;
+ }
+
