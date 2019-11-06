@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Song(models.Model):
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=20)
     artists = models.CharField(max_length=30)
     album = models.CharField(max_length=30)
     genre = models.CharField(max_length=30)
