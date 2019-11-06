@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Homepage</h2>
+{% endblock header %}
+
+{% block main%}
+<div class="container">
+    <!-- Main Content -->
+    {% if song_dict %}
+        <div class="row">
+
+        <!-- Show song thumbnails -->
+        {% for song in song_dict.values %}
+
+            {% include "song/song_thumbnail.html" with id=song.id title=song.title artists=song.artists album_image=song.album_image %} 
+            {% include "song/song_popup.html" with id=song.id title=song.title artists=song.artists album=song.album genre=song.genre year=song.year album_image=song.album_image %}
+
+        {% endfor %}
+
+        </div>
+    {% endif %}
+
+    {% include "divider.html" with icon_class="divider-custom-icon" icon="fas fa-star" %}
+    <div style="text-align: center;">
+        <p><b>Hotline:</b> {{ HOTLINE.name }} - {{ HOTLINE.phone }}</p>
+    </div>
+
+</div>
+{% endblock %}
