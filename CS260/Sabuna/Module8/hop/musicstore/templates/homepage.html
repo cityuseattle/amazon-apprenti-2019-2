@@ -9,16 +9,15 @@
 <!-- Main Content -->
 {% if song_dict %}
     <div class="row">
-        {% for song in song_dict.values %}
+    {% for song in song_dict.values %}
 
-            {% include "song/song_thumbnail.html" with id=song.id title=song.title artists=song.artists album_image=song.album_image %}
-            {% include "song/song_popup.html" with id=song.id title=song.title artists=song.artists album=song.album genre=song.genre year=song.year album_image=song.album_image %}
+        {% include "song/song_thumbnail.html" with id=song.id title=song.title artists=song.artists album_image=song.album_image %}
+        {% include "song/song_popup.html" with id=song.id title=song.title artists=song.artists album=song.album genre=song.genre year=song.year album_image=song.album_image %}
         
-        {% endfor %}
+    {% endfor %}
    
     </div>
 {% endif %}
-
 
 {% include "divider.html" with icon_class="divider-custom-icon" icon="fas fa-star" %}
 <div style="text-align: center;">
