@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block main%}
+
+    <!-- Main Section Heading -->
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Homepage</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- Main Content -->
+    <table style="margin-left:auto; margin-right:auto;border-collapse: separate;border-spacing: 50px 0;">
+        <tr>
+            <td><img src="http://bit.ly/2IPoVn9" alt="Banana Bread" height="200" width="200"></td>
+            <td><img src="http://bit.ly/2Bf6Z0V" alt="Banana Chips" height="200" width="200"></td>
+            <td><img src="http://bit.ly/2IIBbG7" alt="Banana Juice" height="200" width="200"></td>
+            <td><img src="http://bit.ly/3292pgJ" alt="Banana Muffins" height="200" width="200"></td>
+            <td><img src="http://bit.ly/31dqDFt" alt="Banana Pancake" height="200" width="200"></td>
+        </tr>
+        <tr style="text-align: center;margin: 50px;font-size: 30px;font-weight: bold;">
+            <td><a class="btn btn-primary" href="{% url 'product_ns:details' 'Banana Bread' %}?price=10&nutrition=100cal&origin=Seattle" role="button">Banana Bread</a></td>
+            <td><a class="btn btn-primary" href="{% url 'product_ns:details' 'Banana Chips' %}?price=30&nutrition=200cal&origin=UnknownMonkeyIsland" role="button">Banana Chips</a></td>
+            <td><a class="btn btn-primary" href="{% url 'product_ns:details' 'Banana Juice' %}?price=20&nutrition=100cal&origin=Cali" role="button">Banana Juice</a></td>
+            <td><a class="btn btn-primary" href="{% url 'product_ns:details' 'Banana Muffins' %}?price=15&nutrition=400cal&origin=Texas" role="button">Banana Muffins</a></td>
+            <td><a class="btn btn-primary" href="{% url 'product_ns:details' 'Banana Pancake' %}?price=50&nutrition=1000cal&origin=Florida" role="button">Banana Pancake</a></td>
+        </tr>
+    </table>
+
+{% endblock%}
