@@ -41,3 +41,4 @@ def edit_process(_id,_title,_artists,_genre,_year,_album_image):
 
 def delete_process(_id):
     Song.objects.filter(id=_id).delete()
+

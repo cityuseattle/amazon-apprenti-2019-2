@@ -43,7 +43,14 @@
                                 <i class="fas fa-times fa-fw"></i>
                                 Close Window
                             </button>
-                        </div>
+                    <form method="post" action="{%url 'payment_ns:delete_pmt' %}#mainsection" style="display:inline;">
+                    {%csrf_token %}
+                    <button type="submit" name="id" value="{{id}}popup" class="btn btn-danger active">
+                        <i class="fa fa-trash fa-fw"></i>
+                        Delete
+                    </button>
+                </form>
+                         </div>
                     </div>
                 </div>
             </div>
