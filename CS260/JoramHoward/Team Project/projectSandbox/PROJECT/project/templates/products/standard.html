@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block main%}
+
+    <!-- Main Section Heading -->
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Standard THRIVE Kits</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- Main Content -->
+    <h3 class="masthead-subheading font-weight-light mb-0" style="text-align: center"><b><i>Security, food, water, medical, communications, shelter - a complete package after years of research from the best military specialists, scientists and engineers in the world</b></i></h3>
+    <br>
+    <p>1x Glock 19, Gen 5 (comes with four 17-round extended magazines)</p>
+    <p>1000 rounds 9mm ammo (armor piercing, full metal jacket)</p>
+    <p>1x machete, made in Nicaragua (21" long, comes with leather scabbard)</p>
+    <p>2x Headlamps (200 lumens max brightness, 3 modes)</p>
+    <p>30x boxes of MREs (enough food for one person 6+ months)</p>
+    <p>2x water filtration devices</p>
+    <p>10x bottles of Iodine purification tabs (enough to purify water for one person 6+ months</p>
+    <p>2x magnesium bars</p>
+    <p>2x lighters</p>
+    <p>2x CAT-5 Tourniquets</p>
+    <p>2x sterile bandages (extra large)</p>
+    <p>4x sterile bandages (large)</p>
+    <p>8x sterile bandages (medium)</p>
+    <p>16x sterile bandages (small)</p>
+    <p>2x bottles of Meloxicam (1000 mg)</p>
+    <p>8x Fentanyl lollipops (800 mcg)</p>
+    <p>1x Tactical Tailor ruck sack (80 gallon, waterproof cover)</p>
+    <p>1x Tactical Tailor go bag (10 gallon)</p>
+    <p>2x walkie-talkies</p>
+    <p>1x REI Half-Dome+ tent</p>
+    <p>1x Arc'Teryx rain gear (pants and jacket)</p>
+    <p>User's agent is: {{ request.META.HTTP_USER_AGENT }}</p>
+    <div style="text-align: center;">
+        <a class="btn btn-primary" href="premium.html" role="button" style="margin: 50px;font-size: 30px;font-weight: bold;">Premium Quality Kit</a>
+        <a class="btn btn-primary" href="specOps.html" role="button" style="margin: 50px;font-size: 30px;font-weight: bold;">Special Operations Kit</a>
+    </div>
+
+{% endblock%}

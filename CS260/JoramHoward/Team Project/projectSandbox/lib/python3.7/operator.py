@@ -1,0 +1,5 @@
+XSym
+0075
+0ae50d4989d5835ddff3672661fb8de9
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/operator.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
