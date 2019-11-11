@@ -8,7 +8,9 @@ var dotenv_1 = __importDefault(require("dotenv")); //5.4K (gzipped: 2.3K)
 var body_parser_1 = __importDefault(require("body-parser"));
 var mongoose_1 = __importDefault(require("mongoose"));
 var cors_1 = __importDefault(require("cors")); //5.2K (gzipped: 2.1K)
+var fetch_books_1 = __importDefault(require("./controllers/fetch-books"));
 var add_book_1 = __importDefault(require("./controllers/add-book"));
+var add_book_2 = __importDefault(require("./controllers/add-book"));
 dotenv_1.default.config();
 //Initialize MongoDB
 mongoose_1.default.connect(process.env.DB_URI, { useNewUrlParser: true });
@@ -23,3 +25,5 @@ app.use(body_parser_1.default.urlencoded({ extended: true }));
 // The router
 app.post('/book', add_book_1.default);
 app.listen(process.env.port, function () { return console.log("The server is running on http://localhost:" + process.env.port); });
+app.post('/birthdayCard', add_book_2.default);
+app.get('/books', fetch_books_1.default);

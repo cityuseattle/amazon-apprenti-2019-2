@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   private ADD_NEW_BOOK_API = 'http://localhost:8080/book';
   private FETCH_BOOKS_API = 'http://localhost:8080/books';
+  private ADD_NEW_BIRTHDAY_CARD_API = 'http://localhost:8080/birthdayCard';
 
   constructor(private httpClient: HttpClient) { }
 
