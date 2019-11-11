@@ -39,3 +39,9 @@ export class BooksComponent implements OnInit {
     });
   }
 }
+    delete(id: string): void {
+      //Remove the book data from two internal data sources
+      delete this.booksObject[id];
+      this.books = this.DOMSettableTokenList.filter((book) => book._id !== id );
+      this.apiService.deleteBook(id).subscribe();
+    }

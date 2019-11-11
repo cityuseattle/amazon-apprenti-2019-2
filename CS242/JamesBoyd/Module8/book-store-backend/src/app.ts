@@ -3,14 +3,20 @@ import dotenv from 'dotenv'; //5.4K (gzipped: 2.3K)
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors'; //5.2K (gzipped: 2.1K)
-import fetchBooks from './controllers/fetch-books';
+
 import addBookController from './controllers/add-book';
-import addBirthdayCardController from './controllers/add-book';
+import addBirthdayCardController from './controllers/add-birthday-card';
+import fetchBooks from './controllers/fetch-books';
+import fetchBirthdayCards from './controllers/fetch-birthday-cards';
+import fetchBook from './controllers/fetch-book;
+import updateBookController from './controllers/update-book';
+import deleteBookController from './controllers/delete-book';
 
 dotenv.config();
 
 //Initialize MongoDB
 mongoose.connect(process.env.DB_URI as string, {useNewUrlParser: true});
+mongoose.set('useFindAndModify', false);
 const db = mongoose.connection;
 
 const app = express();
@@ -23,7 +29,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
 // The router
-app.post('/book', addBookController)
+app.post('/book', addBookController);
+app.post('/birthdayCard', addBirthdayCardController);
+app.get('/books', fetchBooks);
+app.get('/birthdayCards', fetchBirthdayCards);
+app.get('/book/:id', fetchBook);
+app.put('/book', updateBookController);
+app.delete('/book/:id', deleteBookController);
+
 app.listen(process.env.port, () => console.log(`The server is running on http://localhost:${process.env.port}`));
-app.post('/birthdayCard', addBirthdayCardController)
-app.get('/books', fetchBooks)
