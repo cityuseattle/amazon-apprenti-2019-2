@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc && cpx ./src/.env ./public && cpx ./src/views/**/* public/views"
+    "tsc": "tsc && cpx ./src/.env ./public && cpx ./src/views/* public/views"
   },
   "keywords": [],
   "author": "",

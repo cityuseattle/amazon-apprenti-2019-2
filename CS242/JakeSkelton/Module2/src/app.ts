@@ -11,8 +11,8 @@ app.use(express.static('../public'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-app.get('/address', (req, res) => res.render('address', {
-    title: 'The address page title',
+app.get('/', (req, res) => res.render('index', {
+    title: 'The index page title',
     content: 'This is the content for the address page.'
 }));
 app.get('/', (req, res) => res.end("This is your Express server."));

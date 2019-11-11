@@ -7,6 +7,8 @@ var express_1 = __importDefault(require("express"));
 var dotenv_1 = __importDefault(require("dotenv"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var mongoose_1 = __importDefault(require("mongoose"));
+var new_user_controller_1 = __importDefault(require("../src/controllers/new-user-controller"));
+var find_user_conrollers_1 = __importDefault(require("./controllers/find-user-conrollers"));
 var order_controller_1 = __importDefault(require("./controllers/order-controller"));
 dotenv_1.default.config();
 //Initialize MongoDB
@@ -26,4 +28,6 @@ app.get('/', function (req, res) { return res.render('index', {
     content: 'This is the content for the index page.'
 }); });
 app.get('/order', order_controller_1.default);
-app.listen(3000, function () { return console.log('The server is running on http://localhost:3000'); });
+app.get('/userForm', function (req, res) { return res.render('user-form'); });
+app.post('/user', new_user_controller_1.default);
+app.get('/user', find_user_conrollers_1.default);

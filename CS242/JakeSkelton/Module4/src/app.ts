@@ -3,9 +3,9 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 
-import orderController from './controllers/order-controller';
-import newUserController from './controllers/new-user-controller';
-import logging from './middlewares/logging';
+import newUserController from '../src/controllers/new-user-controller';
+import findUserController from './controllers/find-user-conrollers';
+import orderController from './controllers/order-controller'
 
 dotenv.config();
 
@@ -33,6 +33,7 @@ app.get('/', (req, res) => res.render('index', {
   content: 'This is the content for the index page.'
 }));
 app.get('/order', orderController);
-app.get('/userForm', (req, res) => res.render('user-form')
+app.get('/userForm', (req, res) => res.render('user-form'));
 
-app.listen(3000, () => console.log('The server is running on http://localhost:3000'));
+app.post('/user', newUserController);
+app.get('/user', findUserController);
