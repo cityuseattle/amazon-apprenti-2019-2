@@ -10,6 +10,8 @@ var mongoose_1 = __importDefault(require("mongoose"));
 var order_controller_1 = __importDefault(require("./controllers/order-controller"));
 var new_user_controller_1 = __importDefault(require("./controllers/new-user-controller"));
 var find_user_controller_1 = __importDefault(require("./controllers/find-user-controller"));
+var find_product_controller_1 = __importDefault(require("./controllers/find-product-controller"));
+var new_product_controller_1 = __importDefault(require("./controllers/new-product-controller"));
 dotenv_1.default.config();
 // Initialize MongoDB
 mongoose_1.default.connect(process.env.DB_URI, { useNewUrlParser: true });
@@ -31,4 +33,7 @@ app.get('/order', order_controller_1.default);
 app.get('/userForm', function (req, res) { return res.render('user-form'); });
 app.post('/user', new_user_controller_1.default);
 app.get('/user', find_user_controller_1.default);
-app.listen(3000, function () { return console.log('The server is running on http://localhost:3000'); });
+app.get('/productForm', function (req, res) { return res.render('product-form'); });
+app.post('/product', new_product_controller_1.default);
+app.get('/product', find_product_controller_1.default);
+app.listen(4000, function () { return console.log('The server is running on http://localhost:4000'); });
