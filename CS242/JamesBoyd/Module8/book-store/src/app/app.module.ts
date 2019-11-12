@@ -13,8 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { BirthdayCardFormComponent } from './birthday-card-form/birthday-card-form.component';
 import { BooksComponent } from './books/books.component';
-import { BookDeailDialogComponent } from './book-deail-dialog/book-deail-dialog.component';
+import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,11 @@ import { BookDeailDialogComponent } from './book-deail-dialog/book-deail-dialog.
     BookFormComponent,
     BirthdayCardFormComponent,
     BooksComponent,
-    BookDeailDialogComponent,
+    BookDetailDialogComponent,
   ],
   entryComponent: [
     BookDetailDialogComponent,
-  ]
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
