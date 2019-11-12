@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+export const fetchBooks = async () => await Book.field({});
 
 type BookModel = mongoose.Document & {
     title: string;
