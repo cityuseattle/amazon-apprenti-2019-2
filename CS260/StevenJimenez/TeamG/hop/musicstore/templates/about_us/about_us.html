@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block header %}
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Team G</h2>
+{% endblock header %} {% block main%}
+
+<!-- Main Content -->
+{% if about_us %}
+
+<div style="text-align: center;">
+
+    {% for about_us in about_us %}
+
+    <p>{{about_us}}</p>
+
+    {% empty %}
+
+    
+
+    {% endfor %}
+
+</div>
+
+{% endif %} {% endblock%}
