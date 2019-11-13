@@ -11,8 +11,8 @@ app.use(timestamp_1.default);
 app.use(express_1.default.static('../public'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
-app.get('/address', function (req, res) { return res.render('address', {
-    title: 'The address page title',
+app.get('/', function (req, res) { return res.render('index', {
+    title: 'The index page title',
     content: 'This is the content for the address page.'
 }); });
 app.get('/', function (req, res) { return res.end("This is your Express server."); });

@@ -6,4 +6,4 @@ var logging = function (req, res, next) {
     next();
     console.log('This will be logged after the controller running.');
 };
-exports.default = logger;
+exports.default = logging;
