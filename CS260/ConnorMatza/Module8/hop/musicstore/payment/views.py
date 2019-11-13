@@ -35,11 +35,9 @@ def add_payment(request):
             billing_address = form.cleaned_data['billing_address']
 
             try:
-                print(card_number)
                 models.create_process(card_number, card_type, billing_address)
                 action = "POST_SUCCESSFUL"
             except ValidationError as err:
-                print(err)
                 for err in err.messages:
                     form.add_error(None, err)
                 action = "POST_FAILED"
