@@ -1,0 +1,57 @@
+<!-- base.html is the parent class webpage for this content -->
+{% extends "base.html" %}
+
+<!-- 'block' is a keyword for the block, will insert into whatever template this is extending (from line 1 above) -->
+{% block main %}
+
+<div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center"><br><br><br><br>
+      <h1 class="mx-auto my-0 text-uppercase">The Zombie-Apocalypse Survival Kit</h1><br>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5">Survival of the Fittest - Gear for the Fittest</h2>
+
+      <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-76">
+                    <div class="card-body text-center">
+                        <i class="text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0"><a href="products/standard.html">Standard Kit</a></h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">Security, food, water, medical, communications, shelter</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-76">
+                    <div class="card-body text-center">
+                        <i class="text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0"><a href="products/premium.html">Premium Kit</a></h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">Standard Kit+ everything else you need to not just survive, but THRIVE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-76">
+                    <div class="card-body text-center">
+                        <i class="text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0"><a href="products/specOps.html">Special Ops Kit</a></h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">Premium Kit+ everything else you need to rule the world</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+    <!-- Main Content -->
+
+
+<!-- 'endblock' is a keyword -->
+{% endblock %}

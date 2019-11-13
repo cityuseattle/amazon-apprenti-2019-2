@@ -1,0 +1,5 @@
+XSym
+0074
+65484f5185d35f473ab080cece25143b
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copyreg.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Payment</h2>
+{% endblock header %}
+
+{% block main%}
+
+<!-- Main Content -->
+<div style="text-align: center;">
+    <p>Payment type: {{ payment_type }}</p>
+    <p>Discount: {{ discount }}%</p>
+    <p>City: {{ address.city }}</p>
+    <p>Zipcode: {{ address.zipcode }}</p>
+</div>
+
+{% endblock%}
