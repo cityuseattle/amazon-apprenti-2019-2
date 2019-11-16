@@ -16,5 +16,5 @@ const tupleD: ([number, number] | [number, number, number])[] = [
 // Rest elements
 const bools: [boolean, ...boolean[]] = [true, true, false, true, false];
 
-// a heterogeneous list
+// A heterogeneous list
 const info: [string, number, ...boolean[]] = ['Hello', 372, true, false, true, true];
