@@ -1,9 +1,0 @@
-.fill-reaming-space {
-    flex: 1 1 auto;
-}
-.clickable {
-    outline: none;
-}
-.clickable:hover {
-    cursor: pointer;
-}
